@@ -1,6 +1,6 @@
 import React from "react"
 import { Navbar } from "../components/Navbar/Navbar"
-import { Header } from "../components/Header/Header"
+import { Header } from "../components/Header/HomeHeader"
 import { TextRevealDemo } from "../components/MagicUI/ScrollText/TextReveal"
 import { RightArrow } from "../components/Icons/RightArrow"
 import { Footer } from "../components/Footer/Footer"

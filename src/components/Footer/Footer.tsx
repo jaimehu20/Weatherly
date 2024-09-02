@@ -5,9 +5,9 @@ import { Github } from "../Icons/Github";
 
 export const Footer : React.FC = () => {
     return <>
-            <footer className="bg-white rounded-lg shadow m-4 bg-[#E7EBEE]">
+            <footer className="rounded-lg shadow-lg m-4 bg-[#E7EBEE]">
                 <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                    <span className="text-sm text-black-500 sm:text-center dark:text-black-400">© 2024 <a href="https://jaimehurtado-porfolio.netlify.app/" className="hover:underline">Jaime Hurtado</a>. Made with love <Heart />
+                    <span className="text-sm text-black-500 sm:text-center dark:text-black-400">© 2024 <a href="https://jaimehurtado-porfolio.netlify.app/" className="hover:underline">Jaime Hurtado</a>. Made with <Heart />
                     </span>
                     <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-black dark:text-black-400 sm:mt-0">
                         <li className="flex">
