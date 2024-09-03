@@ -4,8 +4,8 @@ export const Sun : React.FC = () => {
     return <>
         <svg  
             xmlns="http://www.w3.org/2000/svg"  
-            width="50"  
-            height="50"  
+            width="158"  
+            height="141"  
             viewBox="0 0 24 24"  
             fill="currentColor"  
             className="icon icon-tabler icons-tabler-filled icon-tabler-sun">

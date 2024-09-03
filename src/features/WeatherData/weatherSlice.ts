@@ -20,8 +20,7 @@ export const weatherSlice = createSlice({
             state.error = action.error.message;
         }).addCase(getLocationData.fulfilled, (state, action) => {
             state.status = "fulfilled";
-            const {lat, lon} = action.payload[0];
-            state.data = {lat, lon};
+            state.data = action.payload;
         })
 }})
 
