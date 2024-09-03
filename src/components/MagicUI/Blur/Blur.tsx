@@ -67,7 +67,7 @@ export function BlurFadeDemo() {
 
                     if (updatedCities.hasOwnProperty(cityName)) {
                         updatedCities[cityName] = {
-                            ...updatedCities[cityName], // Preserve existing properties
+                            ...updatedCities[cityName],
                             lat: cityLat,
                             lon: cityLon
                         };
@@ -78,10 +78,6 @@ export function BlurFadeDemo() {
             });
         }
     }, [fetchState, response]);
-
-    console.log(cities)
-
-
 
   return (
     <div id="photos" className="w-full z-10">
