@@ -4,76 +4,44 @@ import { fetchedData, fetchStatus } from "../../../features/WeatherData/weatherS
 import { Card } from "../../WeatherCard/Card";
 import BlurFade from "./BlurFadeComponent";
 import { getLocationData } from "../../../features/WeatherData/weatherThunks";
-
-type Cities = {
-    London : string,
-    Madrid: string,
-    Liverpool: string,
-    Istanbul: string,
-    Sydney: string,
-    Tokyo: string,
-    Paris: string,
-    Chicago: string
-}
-
-type CitiesInterface = {
-    [key : string] : string[];
-}
+import { CitiesState, WeatherResponse } from "../../../interfaces/interfaces";
 
 export function BlurFadeDemo() {
     const dispatch = useAppDispatch();
     const fetchState = useAppSelector(fetchStatus);
-    const response = useAppSelector(fetchedData)
+    const response : any = useAppSelector(fetchedData)
     const [cities, setCities] = useState<any>({
-        NewYork: { name: "New York", lat: null, lon: null },
-        London: { name: "London", lat: null, lon: null },
-        Istanbul: { name: "Istanbul", lat: null, lon: null },
-        Sydney: { name: "Sydney", lat: null, lon: null },
-        Tokyo: { name: "Tokyo", lat: null, lon: null },
-        Chicago: { name: "Chicago", lat: null, lon: null },
-        Paris: { name: "Paris", lat: null, lon: null },
-        Madrid: { name: "Madrid", lat: null, lon: null },
-        Liverpool: { name: "Liverpool", lat: null, lon: null }
+        London: { name: "London", current: null },
+        Istanbul: { name: "Istanbul", current: null },
+        Sydney: { name: "Sydney", current: null },
+        Tokyo: { name: "Tokyo", current: null },
+        Chicago: { name: "Chicago", current: null },
+        Paris: { name: "Paris", current: null },
+        Madrid: { name: "Madrid", current: null },
+        Liverpool: { name: "Liverpool", current: null },
+        Moscow: {name: "Moscow", current: null}
     });
 
     useEffect(() => {
         if (fetchState === "idle") {
-            const cityNames = [
-                "New York",
-                "London",
-                "Istanbul",
-                "Sydney",
-                "Tokyo",
-                "Chicago",
-                "Paris",
-                "Madrid",
-                "Liverpool"
-            ];
+            const cityNames = Object.keys(cities);
             cityNames.forEach(city => {
-                dispatch(getLocationData(city))
+                dispatch(getLocationData(city));
             });
         }
-    }, [fetchState, dispatch]);
+    }, [fetchState, dispatch, cities]);
 
     useEffect(() => {
-        if (fetchState === "fulfilled" && Array.isArray(response)) {
-            setCities(prevCities => {
+        if (fetchState === "fulfilled" && response) {
+            setCities((prevCities : CitiesState) => {
                 const updatedCities = { ...prevCities };
-                
-                response.forEach(item => {
-                    const cityName = item.name;
-                    const cityLat = item.lat;
-                    const cityLon = item.lon;
-
-                    if (updatedCities.hasOwnProperty(cityName)) {
-                        updatedCities[cityName] = {
-                            ...updatedCities[cityName],
-                            lat: cityLat,
-                            lon: cityLon
-                        };
-                    }
-                });
-
+                const cityName = response.location.name;
+                if (cityName && updatedCities[cityName]) {
+                    updatedCities[cityName] = {
+                        ...updatedCities[cityName],
+                        current: response.current
+                    };
+                }
                 return updatedCities;
             });
         }
@@ -84,32 +52,32 @@ export function BlurFadeDemo() {
           <BlurFade  delay={0.25 + 1 * 0.05} inView>
             <div className="flex flex-col w-[80%] mx-auto absolute z-10">
                 <div className="grid grid-cols-3 grid-rows-3 gap-4">
-                    <div className="flex justify-center" >
-                        <Card location="New York" lat={cities.lat} lon={cities.lon}/>
+                <div className="flex justify-center" >
+                        <Card location={cities.Moscow.name} current={cities.Moscow.current}/>
                     </div>
                     <div className="flex justify-center" >
-                        <Card location={cities.London.name} lat={cities.London.lat} lon={cities.London.lon}/>
+                        <Card location={cities.London.name} current={cities.London.current}/>
                     </div>
                     <div className="col-start-1 row-start-2 flex justify-center">
-                        <Card location={cities.Istanbul.name} lat={cities.Istanbul.lat} lon={cities.Istanbul.lon}/>
+                        <Card location={cities.Istanbul.name} current={cities.Istanbul.current}/>
                     </div>
                     <div className="col-start-2 row-start-2 flex justify-center">
-                        <Card location={cities.Sydney.name} lat={cities.Sydney.lat} lon={cities.Sydney.lon}/>
+                        <Card location={cities.Sydney.name} current={cities.Sydney.current}/>
                     </div>
                     <div className="col-start-1 row-start-3 flex justify-center">
-                        <Card location={cities.Tokyo.name} lat={cities.Tokyo.lat} lon={cities.Tokyo.lon}/>
+                        <Card location={cities.Tokyo.name} current={cities.Tokyo.current}/>
                     </div>
                     <div className="col-start-2 row-start-3 flex justify-center">
-                        <Card location={cities.Chicago.name} lat={cities.Chicago.lat} lon={cities.Chicago.lon}/>
+                        <Card location={cities.Chicago.name} current={cities.Chicago.current}/>
                     </div>
                     <div className="col-start-3 row-start-1 flex justify-center">
-                        <Card location={cities.Paris.name} lat={cities.Paris.lat} lon={cities.Paris.lon}/>
+                        <Card location={cities.Paris.name} current={cities.Paris.current}/>
                     </div>
                     <div className="col-start-3 row-start-2 flex justify-center">
-                        <Card location={cities.Madrid.name} lat={cities.Madrid.lat} lon={cities.Madrid.lon}/>
+                        <Card location={cities.Madrid.name} current={cities.Madrid.current}/>
                     </div>
                     <div className="flex justify-center">
-                        <Card location={cities.Liverpool.name} lat={cities.Liverpool.lat} lon={cities.Liverpool.lon}/>
+                        <Card location={cities.Liverpool.name} current={cities.Liverpool.current}/>
                     </div>
                 </div>
             </div>
