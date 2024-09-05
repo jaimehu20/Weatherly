@@ -4,64 +4,22 @@ import { Humidity } from "../Icons/Humidity";
 import { Fog } from "../Icons/Fog";
 import { Wind } from "../Icons/Wind";
 import { UVI } from "../Icons/UVI";
-import { CurrentWeather } from "../../interfaces/interfaces";
-
-
+import { CurrentWeather, LocationWeather } from "../../interfaces/interfaces";
+import { Clock } from "../Clock/Clock";
 
 type WeatherCardProps = {
-    location : string;
-    current: CurrentWeather
+    location : LocationWeather;
+    current: CurrentWeather,
 }
 
-
-
 export const Card  = (props : WeatherCardProps) => {
-
-        const [ currentTime, setCurrentTime ] = useState(new Date());
-
-        useEffect(() => {
-            const interval = setInterval(() => {
-                setCurrentTime(new Date());
-            }, 1000);
-
-            return () => clearInterval(interval);
-        }, []);
-
-        const getTimeInZone = (offset : number) => {
-            const timeInZone = new Date(currentTime.getTime() + offset * 60 * 60 * 1000);
-            return timeInZone.toLocaleTimeString();}
-
-        const getOffset = (title : string) => {
-            switch(title) {
-                case 'Moscow':
-                    return +1;
-                case 'London':
-                    return -1;
-                case 'Paris':
-                    return 0;
-                case 'Istanbul':
-                    return 1
-                case 'Sydney':
-                    return +8;
-                case 'Madrid':
-                    return 0;
-                case 'Tokyo':
-                    return +7
-                case 'Chicago':
-                    return -7
-                case 'Liverpool':
-                    return -1
-                default:
-                    return 0; }}
-
-        const offSet = getTimeInZone(getOffset(props.location))
-
+    
     return ( <>
             {props.current && props.location ? (
                 <div className="bg-[rgb(223,233,245,0.6)] rounded-[12px] text-[#002E48] border border-[#091c47]-500 w-[80%] font-[Poppins] mb-[70px] cursor-pointer">
                 <div className="flex items-end mb-[26px] pt-[20px] pb-[20px] border-b border-gray-500 w-[90%] mx-auto">
-                    <h3 className="w-[80%] mx-auto text-[40px]">{props.location}</h3>
-                    <p>{offSet}</p>
+                    <h3 className="w-[80%] mx-auto text-[40px]">{props.location.name}</h3>
+                    <Clock localtime={props.location.localtime}/>
                 </div>
                 <div className="flex flex-col items-center">
                     <h2 className="text-[35px]">{`${props.current.condition.text}`}</h2>
@@ -104,7 +62,7 @@ export const Card  = (props : WeatherCardProps) => {
                 </div>
             </div>
             ) : (
-                <p>loading</p>
+                <p>Loading...</p>
             )}
         
         </>

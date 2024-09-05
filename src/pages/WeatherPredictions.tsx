@@ -10,7 +10,7 @@ export const WeatherPredictions : React.FC = () => {
         <Navbar />
         <MainHeader title="Weather Predictions"/>
         <main className="mt-20 mb-20">
-            <section className="bg-[url(https://besthqwallpapers.com/Uploads/16-2-2018/40884/4k-blue-sky-clouds-sun.jpg)] relative h-[140vh] w-full bg-cover bg-center flex justify-center">
+            <section className="bg-[url(./sky.webp)] relative h-[150vh] w-full bg-cover bg-center flex justify-center">
                 <div className="absolute inset-1 bg-gradient-to-r from-white via-transparent to-white"></div>
                 <BlurFadeDemo />
                 <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>

@@ -1,6 +1,6 @@
-interface Condition {
-    icon: string,
-    text: string
+export interface LocationWeather {
+    name: string,
+    localtime: string
 }
 
 export interface CurrentWeather {
@@ -12,20 +12,22 @@ export interface CurrentWeather {
     wind_kph: number
 }
 
-interface City {
-    name: string,
-    current: CurrentWeather | null;
-}
-
-export interface CitiesState {
-    [key: string] : City
-}
-
-interface LocationWeather {
-    name: string
-}
-
 export interface WeatherResponse {
     location: LocationWeather,
     current: CurrentWeather
+}
+
+interface Condition {
+    icon: string,
+    text: string
+}
+
+export interface LocationHour {
+    localtime: string
+}
+
+export interface WeatherState {
+    data: WeatherResponse[],
+    status: "idle" | "pending" | "fulfilled" | "rejected",
+    error: string | null
 }

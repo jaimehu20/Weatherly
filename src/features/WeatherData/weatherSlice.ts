@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../../app/store";
 import { getLocationData } from "./weatherThunks";
+import { WeatherState } from "../../interfaces/interfaces";
 
-const initialState = {
+const initialState : WeatherState = {
     data: [],
     status: "idle",
     error: null
@@ -20,7 +21,7 @@ export const weatherSlice = createSlice({
             state.error = action.error.message;
         }).addCase(getLocationData.fulfilled, (state, action) => {
             state.status = "fulfilled";
-            state.data = action.payload;
+            state.data.push(action.payload)
         })
 }})
 
