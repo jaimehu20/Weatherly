@@ -28,6 +28,7 @@ export interface LocationHour {
 
 export interface WeatherState {
     data: WeatherResponse[],
+    customSearch: WeatherResponse[],
     status: "idle" | "pending" | "fulfilled" | "rejected",
-    error: string | null
+    error: string | undefined | null
 }
