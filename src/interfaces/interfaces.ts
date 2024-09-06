@@ -14,7 +14,8 @@ export interface CurrentWeather {
 
 export interface WeatherResponse {
     location: LocationWeather,
-    current: CurrentWeather
+    current: CurrentWeather,
+    error?: string
 }
 
 interface Condition {
@@ -29,6 +30,7 @@ export interface LocationHour {
 export interface WeatherState {
     data: WeatherResponse[],
     customSearch: WeatherResponse[],
+    forecastData: [],
     status: "idle" | "pending" | "fulfilled" | "rejected",
     error: string | undefined | null
 }

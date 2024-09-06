@@ -11,3 +11,9 @@ export const getCustomLocation = createAsyncThunk("customWeatherData/getCustomWe
     const data = request.json();
     return data;
 })
+
+export const getForecastData = createAsyncThunk("forecastData/getForecastData", async (cityName : string) => {
+    const request = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_ACCESS_KEY}&q=${cityName}&days=7`);
+    const data = request.json();
+    return data;
+})

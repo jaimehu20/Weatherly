@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../../app/store";
-import { getCustomLocation, getLocationData } from "./weatherThunks";
+import { getCustomLocation, getForecastData, getLocationData } from "./weatherThunks";
 import { WeatherState } from "../../interfaces/interfaces";
 
 const initialState : WeatherState = {
     data: [],
     customSearch: [],
+    forecastData: [],
     status: "idle",
     error: null
 }
@@ -32,9 +33,14 @@ export const weatherSlice = createSlice({
         builder.addCase(getCustomLocation.fulfilled, (state, action) => {
             state.customSearch = [action.payload];
         })
+
+        builder.addCase(getForecastData.fulfilled, (state, action) => {
+            state.forecastData = [action.payload]
+        })
 }})
 
 export const fetchedData = (state : RootState) => state.weather.data;
 export const fetchedSearch = (state : RootState) => state.weather.customSearch;
 export const fetchStatus = (state : RootState) => state.weather.status;
 export const { clearCustomResponse } = weatherSlice.actions;
+export const fetchedForecast = (state : RootState) => state.weather.forecastData; 

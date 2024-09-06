@@ -47,9 +47,8 @@ export function BlurFadeDemo() {
         dispatch(getCustomLocation(searchPattern));
     }
 
- /*   const customCityCard = customResponse.map((info : WeatherResponse) => {
-
-        if (customResponse[0].error) {
+   const customCityCard = customResponse.map((info : WeatherResponse) => {
+        if (info.error) {
             return (
                 <BlurFade  delay={0.25 + 1 * 0.05} inView>
                     <div className="flex flex-col items-center mt-[300px] font-[Poppins] text-[30px]">
@@ -69,7 +68,7 @@ export function BlurFadeDemo() {
                 </BlurFade>
             )
         }
-    }) */
+    }) 
 
   return (
     <>
@@ -96,7 +95,7 @@ export function BlurFadeDemo() {
                     </BlurFade>
                 </div>
           )
-          ) : <p>ERROR</p> }
+          ) : customCityCard }
         </div>
     </>    
   );

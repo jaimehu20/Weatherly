@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <Router>
     <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Home />}/>
       <Route path='/weather-predictions' element={<WeatherPredictions />} />
       <Route path='/weather-predictions-details/:city' element={<WeatherPredictionDetails />} />
     </Routes>
