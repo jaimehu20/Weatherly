@@ -34,3 +34,7 @@ export interface WeatherState {
     status: "idle" | "pending" | "fulfilled" | "rejected",
     error: string | undefined | null
 }
+
+export interface DateProp {
+    localtime: string
+}
