@@ -26,17 +26,7 @@ interface BlurFadeProps {
   blur?: string;
 }
 
-export default function BlurFade({
-  children,
-  className,
-  variant,
-  duration = 0.4,
-  delay = 0,
-  yOffset = 6,
-  inView = false,
-  inViewMargin = "-50px",
-  blur = "6px",
-}: BlurFadeProps) {
+export default function BlurFade({children, className, variant, duration = 0.4, delay = 0, yOffset = 6, inView = false, inViewMargin = "-50px", blur = "6px",}: BlurFadeProps) {
   const ref = useRef(null);
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
@@ -58,7 +48,7 @@ export default function BlurFade({
           duration,
           ease: "easeOut",
         }}
-        className="flex justify-center"
+        className="flex flex-col items-center z-10"
       >
         {children}
       </motion.div>

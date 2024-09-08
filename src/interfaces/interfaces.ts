@@ -9,13 +9,49 @@ export interface CurrentWeather {
     temp_c: number,
     uv: number,
     vis_km: number,
-    wind_kph: number
+    wind_kph: number,
+    last_updated: string,
+    feelslike_c: number,
+    pressure_mb: number,
+    dewpoint_c: number
+}
+
+export interface SingularDay {
+    mintemp_c: number,
+    maxtemp_c: number,
+    daily_chance_of_rain: number,
+    condition: Condition,
+    avghumidity: number,
+    maxwind_kph: number
+}
+
+export interface SingularHour {
+    condition: Condition,
+    time: string,
+    temp_c: number
+}
+
+export interface WeatherDay {
+    day: SingularDay,
+    hour: SingularHour[],
+    date: string
+}
+
+export interface ForecastDay {
+    forecastday: WeatherDay[]
 }
 
 export interface WeatherResponse {
     location: LocationWeather,
     current: CurrentWeather,
-    error?: string
+    error?: string,
+    forecast: ForecastDay
+}
+
+export interface ForecastResponse {
+    current: CurrentWeather,
+    forecast: ForecastDay,
+    location: Location
 }
 
 interface Condition {
