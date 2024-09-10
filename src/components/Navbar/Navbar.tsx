@@ -19,9 +19,11 @@ export const Navbar : React.FC = () => {
                             Weather Predictions
                         </NavLink>
                     </li>
-                    <li className="cursor-pointer h-[21px]">Weather Alerts</li>
-                    <li className="cursor-pointer h-[21px]">Interactive Maps</li>
-                    <li className="cursor-pointer h-[21px]">News & Updates</li>
+                    <li className="cursor-pointer h-[21px]">
+                        <NavLink to={"/news-&-updates"}>
+                            News & Updates
+                        </NavLink>
+                    </li>
                     <li className="cursor-pointer h-[21px]">Guides & Tips</li>
                     <li className="cursor-pointer h-[21px]">Weather Stations</li>
                     <li className="cursor-pointer h-[21px]">Contact</li>

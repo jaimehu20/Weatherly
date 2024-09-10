@@ -106,7 +106,7 @@ export const WeatherPredictionDetails = () => {
                                             <>
                                                 <td>
                                                     <div className={clickedIndex === index ? "bg-white mt-[5px] p-[10px] text-[14px]" : "hidden"}>
-                                                        <p>{`Rain chance: ${info.forecast.forecastday[0].day.daily_chance_of_rain}%`}</p>
+                                                        <p>{`Visibility: ${info.forecast.forecastday[0].day.avgvis_km} Km`}</p>
                                                         <p>{`Humidity: ${dayData.day.avghumidity}%`}</p>
                                                         <p>{`Rain chance: ${dayData.day.daily_chance_of_rain}%`}</p>
                                                         <p>{`Wind: ${dayData.day.maxwind_kph} Km/h`}</p>
@@ -139,8 +139,6 @@ export const WeatherPredictionDetails = () => {
            </>
         )
     })
-
-    console.log(data)
 
     return <>
         <Navbar />

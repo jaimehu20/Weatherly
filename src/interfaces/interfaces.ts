@@ -22,7 +22,8 @@ export interface SingularDay {
     daily_chance_of_rain: number,
     condition: Condition,
     avghumidity: number,
-    maxwind_kph: number
+    maxwind_kph: number,
+    avgvis_km: number
 }
 
 export interface SingularHour {
