@@ -11,6 +11,7 @@ import { Card } from "../components/WeatherCard/Card";
 import BlurFade from "../components/MagicUI/Blur/BlurFadeComponent";
 import { SadIcon } from "../components/Icons/Sad";
 import { Search } from "../components/Icons/Search";
+import { useTheme } from "../context/ThemeContext";
 
 export const WeatherPredictions : React.FC = () => {
 
@@ -19,7 +20,8 @@ export const WeatherPredictions : React.FC = () => {
     const customResponse : any = useAppSelector(fetchedSearch);
     const fetchState = useAppSelector(fetchStatus);
     const cities = ["London", "Istanbul", "Sydney", "Tokyo", "Chicago", "Paris", "Madrid", "Liverpool", "Moscow"];
-    const [ searchPattern, setSearchPattern ] = useState<string>("")
+    const [ searchPattern, setSearchPattern ] = useState<string>("");
+    const { theme } = useTheme();
 
     useEffect(() => {
         if (fetchState === "idle") {
@@ -78,7 +80,7 @@ export const WeatherPredictions : React.FC = () => {
         <Navbar />
         <MainHeader title="Weather Predictions"/>
         <main className="mt-20 mb-20">
-            <section className="bg-[url(./sky.webp)] relative h-[150vh] w-full bg-cover bg-center flex flex-col">
+            <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"} relative h-[150vh] w-full bg-cover bg-center flex flex-col`}>
                 <div className="absolute inset-1 bg-gradient-to-r from-white via-transparent to-white"></div>
                 <div className="flex justify-between w-[75%] mx-auto mb-[42px] z-10 mb-[40px]">
                     <h1 className="text-[34px] font-[Poppins] font-semibold">Top Locations</h1>

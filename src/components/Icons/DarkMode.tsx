@@ -1,19 +1,23 @@
 import React from 'react';
 import { useState } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { useTheme } from '../../context/ThemeContext';
 
 export const DarkModeIcon : React.FC = () => {
-  const [isDarkMode, setDarkMode] = useState<boolean>(false);
+  
+  const { theme, toggleTheme } = useTheme();
 
-  const toggleDarkMode = (checked: boolean) => {
-    setDarkMode(checked);
-  };
+  const isDarkMode = theme === "dark";
+
+  const handleToggle = () => {
+    toggleTheme();
+  }
 
   return (
     <DarkModeSwitch
       style={{ margin: '0' }}
       checked={isDarkMode}
-      onChange={toggleDarkMode}
+      onChange={handleToggle}
       size={20}
       moonColor='darkgray'
       sunColor='orange'

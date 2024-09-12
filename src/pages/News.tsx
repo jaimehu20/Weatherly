@@ -22,7 +22,7 @@ export const News = () => {
     }, [status, dispatch])
 
     const getRandomArticles = (articles : any, count = 4) => {
-        const filteredArticles = articles.filter(article => article.title !== '[Removed]' && article.urlToImage != null);
+        const filteredArticles = articles.filter((article : any) => article.title !== '[Removed]' && article.urlToImage != null);
         return [...filteredArticles].sort(() => Math.random() - 0.5).slice(0, count);
     };
 
@@ -50,7 +50,7 @@ export const News = () => {
                                         <div className="flex flex-col">
                                             <img className="rounded object-cover mb-[10px] shadow-lg" src={articleGroup[0].urlToImage}/>
                                             <small className="mb-[10px]">{articleGroup[0].source.name}</small>
-                                            <a href={articleGroup[0].url} target="_blank">
+                                            <a href={articleGroup[0].url} rel="noopener noreferrer" target="_blank">
                                                 <p className="text-[30px] font-semibold">{articleGroup[0].title}</p>
                                             </a>
                                             <small>{`Published at ${new Date(articleGroup[0].publishedAt).toISOString().substr(11, 8)}`}</small>
@@ -59,11 +59,11 @@ export const News = () => {
                                     <div>
                                         <div className="flex flex-col">
                                             <small>{articleGroup[1].source.name}</small>
-                                            <a href={articleGroup[1].url} target="_blank" className="w-[80%]">
+                                            <a href={articleGroup[1].url} rel="noopener noreferrer" target="_blank" className="w-[80%]">
                                                 <p className="text-[25px] font-medium">{articleGroup[1].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[1].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank">
+                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank" rel="noopener no referrer">
                                                 <p>Learn More</p>
                                                 <RightArrow />
                                                 </a>
@@ -72,11 +72,11 @@ export const News = () => {
                                     <div className="col-start-2 row-start-2">
                                         <div className="flex flex-col">
                                             <small>{articleGroup[2].source.name}</small>
-                                            <a href={articleGroup[2].url} target="_blank" className="w-[80%]">
+                                            <a href={articleGroup[2].url} rel="noopener noreferrer" target="_blank" className="w-[80%]">
                                                 <p className="text-[25px] font-medium">{articleGroup[2].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[2].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank">
+                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank" rel="noopener no referrer">
                                                 <p>Learn More</p>
                                                 <RightArrow />
                                             </a>
@@ -85,11 +85,11 @@ export const News = () => {
                                     <div className="col-start-2 row-start-3">
                                         <div className="flex flex-col">
                                             <small>{articleGroup[3].source.name}</small>
-                                            <a href={articleGroup[3].url} target="_blank" className="w-[80%]">
+                                            <a href={articleGroup[3].url} rel="noopener noreferrer" target="_blank" className="w-[80%]">
                                                 <p className="text-[25px] font-medium">{articleGroup[3].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[3].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank">
+                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank" rel="noopener no referrer">
                                                 <p>Learn More</p>
                                                 <RightArrow />
                                             </a>

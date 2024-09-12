@@ -4,16 +4,15 @@ import { FC, ReactNode, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { cn } from "../../../lib/utils";
+import { useTheme } from "../../../context/ThemeContext";
 
 interface TextRevealByWordProps {
   text: string;
   className?: string;
 }
 
-export const TextRevealByWord: FC<TextRevealByWordProps> = ({
-  text,
-  className,
-}) => {
+export const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className }) => {
+
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
@@ -57,12 +56,13 @@ interface WordProps {
 
 const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
+  const { theme } = useTheme();
   return (
     <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
       <span className={"absolute opacity-30"}>{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-black dark:text-black"}
+        className={`${theme === "dark" ? "text-[#FFFFFF]" : "text-[#000000]"}`}
       >
         {children}
       </motion.span>
