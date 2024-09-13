@@ -23,7 +23,7 @@ export const ThemeProvider = ({ children } : { children: ReactNode }) => {
     };
 
     useEffect(() => {
-        document.body.className = theme === 'dark' ? 'bg-[#26292B]' : 'bg-[#FFFFFF]';
+        document.body.className = theme === 'dark' ? 'bg-[#26292B]' : 'bg-[#EDEDED]';
     }, [theme]);
 
     return (

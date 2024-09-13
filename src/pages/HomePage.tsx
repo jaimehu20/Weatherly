@@ -15,7 +15,7 @@ export const Home : React.FC = () => {
         <Header />
         <main>
             <TextRevealDemo />
-            <div className={`${theme === "dark" ? "text-[#FFFFFF]" : "text-[#000000]"} flex flex-col w-[30%] font-[Poppins] mx-auto pb-[200px]`}>
+            <div className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#000000]"} flex flex-col w-[30%] font-[Poppins] mx-auto pb-[200px]`}>
                 <h1 className="text-[60px] font-semibold pb-5">Get Started.</h1>
                 <h3 className="pb-5">Discover the weather in your city and beyond.</h3>
                 <ul className="mb-10">
@@ -30,7 +30,7 @@ export const Home : React.FC = () => {
                         </p>
                     </li>
                 </ul>
-                <button className={`${theme === "dark" ? "border-[#FFFFFF]" : "border-black"} w-[100px] rounded-lg border`}>Begin Now</button>
+                <button className={`${theme === "dark" ? "border-[#EDEDED]" : "border-black"} w-[100px] rounded-lg border`}>Begin Now</button>
             </div>
         </main>
         <Footer />
