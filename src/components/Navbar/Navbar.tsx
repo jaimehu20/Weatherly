@@ -34,7 +34,7 @@ export const Navbar : React.FC = () => {
                     </li>
                     <li className="cursor-pointer h-[21px]">
                         <NavLink to={"/about-us"}>
-                            About Us
+                            About
                         </NavLink>
                     </li>
                     <li className="cursor-pointer h-[21px]">
