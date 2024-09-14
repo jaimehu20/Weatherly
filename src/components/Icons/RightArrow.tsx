@@ -8,7 +8,7 @@ export const RightArrow: React.FC = () => {
             height="24"  
             viewBox="0 0 24 24"  
             fill="none"  
-            stroke="currentColor"  
+            stroke="#002E48"  
             strokeWidth="2"  
             strokeLinecap="round"  
             strokeLinejoin="round"  

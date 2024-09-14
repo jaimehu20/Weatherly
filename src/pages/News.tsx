@@ -8,12 +8,14 @@ import { MarqueeDemo } from "../components/News/News";
 import { Footer } from "../components/Footer/Footer";
 import { RightArrow } from "../components/Icons/RightArrow";
 import BlurFade from "../components/MagicUI/Blur/BlurFadeComponent";
+import { useTheme } from "../context/ThemeContext";
 
 export const News = () => {
 
     const dispatch = useAppDispatch();
     const data = useAppSelector(fetchedNews);
     const status = useAppSelector(fetchStatus);
+    const { theme } = useTheme();
 
     useEffect(() => {
         if (status === "idle") {
@@ -35,16 +37,16 @@ export const News = () => {
         const content = combinedArticles.map((articleGroup, index) => {
             return (
                 <>
-                    <article className="z-10 w-[60%] mx-auto bg-[rgb(223,233,245,0.6)] font-[Poppins] rounded-[12px] pb-[20px]">
+                    <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>
                         <div className="border-b-2 border-black w-[98%] mx-auto mb-[30px]">
                             {index === 0 && (
                                 <div className="p-[12px]">
-                                    <h3 className="text-[30px] font-semibold w-[98%] mx-auto">Featured news</h3>
+                                    <h3 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} text-[30px] font-semibold w-[98%] mx-auto`}>Featured news</h3>
                                 </div> 
                             )}
                         </div>
                         <div>
-                            <div className="p-[12px] pl-[24px] pr-[24px]">
+                            <div className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} p-[12px] pl-[24px] pr-[24px]`}>
                                 <div className="grid grid-cols-2 grid-rows-3 gap-x-[20px] gap-y-[20px]">
                                     <div className="row-span-3 mr-[30px]">
                                         <div className="flex flex-col">
@@ -64,7 +66,7 @@ export const News = () => {
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[1].publishedAt).toISOString().substr(11, 8)}`}</small>
                                             <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank" rel="noopener no referrer">
-                                                <p>Learn More</p>
+                                                <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                                 </a>
                                         </div>
@@ -77,7 +79,7 @@ export const News = () => {
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[2].publishedAt).toISOString().substr(11, 8)}`}</small>
                                             <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank" rel="noopener no referrer">
-                                                <p>Learn More</p>
+                                                <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                             </a>
                                         </div>
@@ -90,7 +92,7 @@ export const News = () => {
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[3].publishedAt).toISOString().substr(11, 8)}`}</small>
                                             <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank" rel="noopener no referrer">
-                                                <p>Learn More</p>
+                                                <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                             </a>
                                         </div>
@@ -108,16 +110,16 @@ export const News = () => {
                 <Navbar />
                 <MainHeader title="News & Updates" />
                 <main className="mt-20 mb-10">
-                    <section className="bg-[url(./sky.webp)] relative w-full bg-cover bg-center flex flex-col">
-                        <div className="absolute inset-1 bg-gradient-to-r from-white via-transparent to-white"></div>
+                    <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"} relative w-full bg-cover bg-center flex flex-col`}>
+                    <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                         <BlurFade delay={0.25 + 1 * 0.05} inView className="flex flex-row justify-center">
                             {content}
                             <div className="mt-[78px]">
-                                <h1 className="font-[Poppins] text-[44px] font-semibold">Global News Hub</h1>
+                                <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} font-[Poppins] text-[44px] font-semibold`}>Global News Hub</h1>
                             </div>
                             <MarqueeDemo data={data}/>
                         </BlurFade>
-                        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
+                    <div className={`${theme === "dark" ? "absolute inset-0 bg-gradient-to-b from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-0 bg-gradient-to-b from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                     </section>
                 </main>
                 <Footer />

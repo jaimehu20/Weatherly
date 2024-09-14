@@ -1,6 +1,10 @@
 import React from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 export const Search : React.FC = () => {
+
+    const { theme } = useTheme();
+
     return <>
         <svg  
             xmlns="http://www.w3.org/2000/svg"  
@@ -8,7 +12,7 @@ export const Search : React.FC = () => {
             height="28"  
             viewBox="0 0 24 24"  
             fill="none"  
-            stroke="#002E48"  
+            stroke={theme === "dark" ? "#EDEDED" : "#002E48"} 
             strokeWidth="2"  
             strokeLinecap="round"  
             strokeLinejoin="round"  
