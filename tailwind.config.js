@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -10,6 +12,8 @@ export default {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
       keyframes: {
         "border-beam": {
@@ -25,6 +29,16 @@ export default {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
+        orbit: {
+          "0%" : {
+            transform:
+            "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%" : {
+            transform:
+            "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        }
       },
     },
   },

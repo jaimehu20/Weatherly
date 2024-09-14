@@ -5,6 +5,7 @@ import { WeatherPredictionDetails } from "./pages/WeatherPredictionDetails";
 import { News } from "./pages/News";
 import { Guides } from "./pages/Guides";
 import { ThemeProvider } from "./context/ThemeContext";
+import { About } from "./pages/AboutUs";
 
 export function App() {
     return (
@@ -16,6 +17,7 @@ export function App() {
                     <Route path='/weather-predictions-details/:city' element={<WeatherPredictionDetails />} />
                     <Route path='/news-&-updates' element={<News />} />
                     <Route path='/guides-&-tips' element={<Guides />} />
+                    <Route path="/about-us" element={<About />} />
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>

@@ -14,7 +14,7 @@ export const Navbar : React.FC = () => {
                 <ul className="flex gap-11 items-center">
                     <li className="cursor-pointer h-[21px]">
                         <NavLink to={"/"}>
-                            <Globe />
+                            <Globe className={`${theme === "dark" ? "#EDEDED" : "#2E3239"}`}/>
                         </NavLink>
                     </li>
                     <li className="cursor-pointer h-[21px]">
@@ -32,9 +32,11 @@ export const Navbar : React.FC = () => {
                             Guides & Tips
                         </NavLink>
                     </li>
-                    <li className="cursor-pointer h-[21px]">Weather Stations</li>
-                    <li className="cursor-pointer h-[21px]">Contact</li>
-                    <li className="cursor-pointer h-[21px]">About Us</li>
+                    <li className="cursor-pointer h-[21px]">
+                        <NavLink to={"/about-us"}>
+                            About Us
+                        </NavLink>
+                    </li>
                     <li className="cursor-pointer h-[21px]">
                         <DarkModeIcon />
                     </li>
