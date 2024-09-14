@@ -9,7 +9,7 @@ export const Footer : React.FC = () => {
     const { theme } = useTheme();
 
     return <>
-            <footer className={`${theme === "dark" ? "bg-[#2E3239] text-[#EDEDED]" : "bg-[#E7EBEE]"} rounded-lg shadow-lg m-4`}>
+            <footer className={`${theme === "dark" ? "bg-[#2E3239] text-[#EDEDED]" : "bg-[#E7EBEE]"} w-[98%] rounded-lg shadow-lg m-4`}>
                 <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
                     <span className="text-sm text-black-500 sm:text-center dark:text-black-400">© 2024 <a href="https://jaimehurtado-porfolio.netlify.app/" className="hover:underline">Jaime Hurtado</a>. Made with <Heart />
                     </span>

@@ -5,7 +5,7 @@ type MainHeaderprops = {
 
 export const MainHeader = (props : MainHeaderprops) => {
     return <>
-        <header>
+        <header className="z-10">
             <BorderBeamDemo title={props.title} />
         </header>
     </>
