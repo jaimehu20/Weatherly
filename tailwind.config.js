@@ -40,6 +40,10 @@ export default {
           },
         }
       },
+      screens: {
+        'max-1000': { 'max': '1000px' },
+        'min-1000' : '1000px'
+      }
     },
   },
   plugins: [],
