@@ -83,7 +83,7 @@ export const WeatherPredictions : React.FC = () => {
             <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"} relative h-[150vh] w-full bg-cover bg-center flex flex-col`}>
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                 <div className="flex justify-between w-[75%] mx-auto mb-[42px] z-10 mb-[40px]">
-                    <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#000000]"} text-[34px] font-[Poppins] font-semibold`}>Top Locations</h1>
+                    <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} text-[34px] font-[Poppins] font-semibold`}>Top Locations</h1>
                     <form id="searchForm" onSubmit={handleSubmit}>
                         <input type="text" className={`${theme === "dark" ? "bg-[#51636C] text-[#EDEDED] border-[#EDEDED]" : "bg-[rgb(223,233,245,0.6)] text-[#002E48] border-[#002E48]"} text-[26px] font-[Poppins] pl-[20px] pr-[70px] pt-[10px] pb-[10px] rounded border-2`} onChange={handleChange} placeholder="Search your city..."/>
                         <button type="submit" className="relative right-[40px] top-[7px]">

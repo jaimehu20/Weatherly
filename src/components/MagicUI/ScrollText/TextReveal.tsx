@@ -1,7 +1,7 @@
 import { useTheme } from "../../../context/ThemeContext";
 import { TextRevealByWord } from "./ScrollTextComponent";
 
-export const TextRevealDemo = () => {
+export const Slogan = () => {
 
   const { theme } = useTheme();
 
