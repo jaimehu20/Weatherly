@@ -42,7 +42,11 @@ export default {
       },
       screens: {
         'max-1000': { 'max': '1000px' },
-        'min-1000' : '1000px'
+        'min-1000' : '1000px',
+        'md-lg': {'min': '700px', 'max': '1000px'},
+      },
+      display: {
+        'table-row' : 'table-row'
       }
     },
   },

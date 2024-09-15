@@ -1,4 +1,4 @@
-import { BorderBeamDemo } from "../MagicUI/BorderBeam/BorderBeam"
+import { HeaderStyledTitle } from "../MagicUI/BorderBeam/BorderBeam"
 
 type MainHeaderprops = {
     title: string }
@@ -6,7 +6,7 @@ type MainHeaderprops = {
 export const MainHeader = (props : MainHeaderprops) => {
     return <>
         <header className="z-10">
-            <BorderBeamDemo title={props.title} />
+            <HeaderStyledTitle title={props.title} />
         </header>
     </>
 }

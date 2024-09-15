@@ -42,17 +42,17 @@ export const WeatherPredictionDetails = () => {
 
         return (
            <>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col  w-[38%] mx-auto rounded-[8px] border-2  z-10  mb-[50px]`}>
-                        <article className="flex justify-around p-[22px] pl-[30px]">
-                            <div className="flex">
-                                <div>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[38%] max-1000:w-[95%] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10  mb-[50px]`}>
+                        <article className="flex justify-around p-[22px] pl-[30px] max-1000:pl-[6px] max-1000:pr-[6px]">
+                            <div className="flex max-1000:mr-[7px]">
+                                <div className="max-1000:w-[138px]">
                                     <h1 className="font-bold text-[30px]">Now</h1>
-                                    <p className="text-[23px]">{`${info.current.temp_c} ºC`}</p>
-                                    <p className="text-[16px] pb-[20px]">{info.current.condition.text}</p>
-                                    <p className="text-[16px]">{`Feels like: ${info.current.feelslike_c} ºC`}</p>
-                                    <p className="text-[16px]">{`Forecast: ${info.forecast.forecastday[0].day.mintemp_c} ºC / ${info.forecast.forecastday[0].day.maxtemp_c} ºC`}</p>
-                                    <p className="text-[16px]">{`Rain chance: ${info.forecast.forecastday[0].day.daily_chance_of_rain}%`}</p>
-                                    <p className="text-[16px]">{`Wind: ${info.current.wind_kph} Km/h`}</p>
+                                    <p className="text-[23px] max-1000:text-[14px]">{`${info.current.temp_c} ºC`}</p>
+                                    <p className="text-[16px] pb-[20px] max-1000:text-[12px]">{info.current.condition.text}</p>
+                                    <p className="text-[16px] max-1000:text-[12px]">{`Feels like: ${info.current.feelslike_c} ºC`}</p>
+                                    <p className="text-[16px] max-1000:text-[12px]">{`Forecast: ${info.forecast.forecastday[0].day.mintemp_c} ºC / ${info.forecast.forecastday[0].day.maxtemp_c} ºC`}</p>
+                                    <p className="text-[16px] max-1000:text-[12px]">{`Rain chance: ${info.forecast.forecastday[0].day.daily_chance_of_rain}%`}</p>
+                                    <p className="text-[16px] max-1000:text-[12px]">{`Wind: ${info.current.wind_kph} Km/h`}</p>
                                 </div>
                                 <div>
                                     <img src={info.current.condition.icon} />
@@ -77,51 +77,53 @@ export const WeatherPredictionDetails = () => {
                             </div>
                         </article>
                 </div>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
-                    <article className="flex flex-col p-[20px]">
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] max-1000:w-[95%] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
+                    <article className="flex flex-col p-[20px] max-1000:pl-[10px] max-1000:pr-[10px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Upcoming 7 days</h1>
-                        <table className="w-[80%] mx-auto" >
-                            <tr className="text-center bg-white rounded">
-                                {info.forecast.forecastday.map((dayData) => {
-                                    return (
-                                        <td className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[#EDEDED]"} font-semibold shadow-lg`}>{getDayOfWeek(dayData.date)}</td>
-                                    )
-                                })}
-                            </tr>
-                            <tr>
-                                {info.forecast.forecastday.map((dayData, index) => {
-                                    return (
-                                        <>
-                                            <td key={index} className="cursor-pointer shadow-lg" onClick={() => handleClick(index)}>
-                                                <div className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[#EDEDED]"} flex flex-col items-center rounded gap-[10px] p-[10px]`}>
-                                                    <img src={dayData.day.condition.icon} className="w-[64px]"/>
-                                                    <p className="text-[14px]">{`${dayData.day.mintemp_c}ºC / ${dayData.day.maxtemp_c}ºC`}</p>
-                                                </div>
-                                            </td>
-                                        </>
-                                    )
-                                })}
-                            </tr>
-                            <tr>
-                                {info.forecast.forecastday.map((dayData, index) => {
+                        <div className="max-1000:overflow-x-auto max-1000:w-full md-lg:overflow-hidden">
+                            <table className="w-[80%] max-1000:w-full mx-auto" >
+                                <tr className={`${theme === "dark" ? "bg-[#2E3239]" : ""} text-center rounded max-1000:flex max-1000:gap-[15px] md-lg:table-row`}>
+                                    {info.forecast.forecastday.map((dayData) => {
+                                        return (
+                                            <td className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[#EDEDED]"} font-semibold shadow-lg`}>{getDayOfWeek(dayData.date)}</td>
+                                        )
+                                    })}
+                                </tr>
+                                <tr className="max-1000:flex max-1000:gap-[15px] md-lg:table-row">
+                                    {info.forecast.forecastday.map((dayData, index) => {
                                         return (
                                             <>
-                                                <td>
-                                                    <div className={clickedIndex === index ? theme === "dark" ? "bg-[#2E3239] bg-white mt-[5px] p-[10px] text-[14px]" : "bg-[#EDEDED] bg-white mt-[5px] p-[10px] text-[14px]"  : "hidden"}>
-                                                        <p>{`Visibility: ${info.forecast.forecastday[0].day.avgvis_km} Km`}</p>
-                                                        <p>{`Humidity: ${dayData.day.avghumidity}%`}</p>
-                                                        <p>{`Rain chance: ${dayData.day.daily_chance_of_rain}%`}</p>
-                                                        <p>{`Wind: ${dayData.day.maxwind_kph} Km/h`}</p>
+                                                <td key={index} className="cursor-pointer shadow-lg" onClick={() => handleClick(index)}>
+                                                    <div className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[#EDEDED]"} flex flex-col items-center rounded gap-[10px] p-[6px]`}>
+                                                        <img src={dayData.day.condition.icon} className="w-[64px]"/>
+                                                        <p className="text-[10px] hidden">{`${dayData.day.mintemp_c}ºC / ${dayData.day.maxtemp_c}ºC`}</p>
                                                     </div>
                                                 </td>
                                             </>
                                         )
                                     })}
-                            </tr>
-                        </table>
+                                </tr>
+                                <tr className="max-1000:flex max-1000:gap-[15px] md-lg:table-row">
+                                    {info.forecast.forecastday.map((dayData, index) => {
+                                            return (
+                                                <>
+                                                    <td className="max-1000:w-[80px]">
+                                                        <div className={clickedIndex === index ? theme === "dark" ? "bg-[#2E3239] p-[10px] text-[14px] text-center" : "bg-[#EDEDED] mt-[5px] p-[10px] text-[14px] text-center"  : "hidden"}>
+                                                            <p>{`Visibility: ${info.forecast.forecastday[0].day.avgvis_km} Km`}</p>
+                                                            <p>{`Humidity: ${dayData.day.avghumidity}%`}</p>
+                                                            <p>{`Rain chance: ${dayData.day.daily_chance_of_rain}%`}</p>
+                                                            <p>{`Wind: ${dayData.day.maxwind_kph} Km/h`}</p>
+                                                        </div>
+                                                    </td>
+                                                </>
+                                            )
+                                        })}
+                                </tr>
+                            </table>
+                        </div>
                     </article>
                 </div>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] mx-auto rounded-[8px] border-2 z-10`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] max-1000:w-[95%] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2 z-10`}>
                     <article className="flex flex-col p-[20px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Hourly Weather Forecast</h1>
                         <div className="flex overflow-x-scroll whitespace-nowrap scroll-smooth w-full p-[20px]">
@@ -149,7 +151,7 @@ export const WeatherPredictionDetails = () => {
             <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"}  relative w-full bg-cover bg-center flex flex-col font-[Poppins]`}>
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                     <BlurFade delay={0.25 + 1 * 0.05} inView className="flex-col">
-                        <div className="w-[20%] text-center mx-auto mb-[40px] z-10">
+                        <div className="w-[20%] max-1000:w-full text-center mx-auto mb-[40px] z-10">
                             <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} text-[40px] font-semibold`}>{city}</h1>
                         </div>
                         {currentWeather}

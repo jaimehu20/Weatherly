@@ -37,7 +37,7 @@ export const News = () => {
         const content = combinedArticles.map((articleGroup, index) => {
             return (
                 <>
-                    <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>
+                    <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] max-1000:w-[95%] max-1000:max-w-[590px] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>
                         <div className="border-b-2 border-black w-[98%] mx-auto mb-[30px]">
                             {index === 0 && (
                                 <div className="p-[12px]">
@@ -47,7 +47,7 @@ export const News = () => {
                         </div>
                         <div>
                             <div className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} p-[12px] pl-[24px] pr-[24px]`}>
-                                <div className="grid grid-cols-2 grid-rows-3 gap-x-[20px] gap-y-[20px]">
+                                <div className="grid grid-cols-2 grid-rows-3 gap-x-[20px] gap-y-[20px] max-1000:flex max-1000:flex-col">
                                     <div className="row-span-3 mr-[30px]">
                                         <div className="flex flex-col">
                                             <img className="rounded object-cover mb-[10px] shadow-lg" src={articleGroup[0].urlToImage}/>
@@ -62,10 +62,10 @@ export const News = () => {
                                         <div className="flex flex-col">
                                             <small>{articleGroup[1].source.name}</small>
                                             <a href={articleGroup[1].url} rel="noopener noreferrer" target="_blank" className="w-[80%]">
-                                                <p className="text-[25px] font-medium">{articleGroup[1].title}</p>
+                                                <p className="text-[25px] font-medium max-1000:text-[20px] max-1000:font-light">{articleGroup[1].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[1].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank" rel="noopener no referrer">
+                                            <a className="flex justify-end bg-white w-[18%] max-1000:w-[120px] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank" rel="noopener no referrer">
                                                 <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                                 </a>
@@ -75,10 +75,10 @@ export const News = () => {
                                         <div className="flex flex-col">
                                             <small>{articleGroup[2].source.name}</small>
                                             <a href={articleGroup[2].url} rel="noopener noreferrer" target="_blank" className="w-[80%]">
-                                                <p className="text-[25px] font-medium">{articleGroup[2].title}</p>
+                                                <p className="text-[25px] font-medium max-1000:text-[20px] max-1000:font-light">{articleGroup[2].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[2].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank" rel="noopener no referrer">
+                                            <a className="flex justify-end bg-white w-[18%] max-1000:w-[120px] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank" rel="noopener no referrer">
                                                 <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                             </a>
@@ -88,10 +88,10 @@ export const News = () => {
                                         <div className="flex flex-col">
                                             <small>{articleGroup[3].source.name}</small>
                                             <a href={articleGroup[3].url} rel="noopener noreferrer" target="_blank" className="w-[80%]">
-                                                <p className="text-[25px] font-medium">{articleGroup[3].title}</p>
+                                                <p className="text-[25px] font-medium max-1000:text-[20px] max-1000:font-light">{articleGroup[3].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[3].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank" rel="noopener no referrer">
+                                            <a className="flex justify-end bg-white w-[18%] max-1000:w-[120px] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank" rel="noopener no referrer">
                                                 <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                             </a>
@@ -115,7 +115,7 @@ export const News = () => {
                         <BlurFade delay={0.25 + 1 * 0.05} inView className="flex flex-row justify-center">
                             {content}
                             <div className="mt-[78px]">
-                                <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} font-[Poppins] text-[44px] font-semibold`}>Global News Hub</h1>
+                                <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} font-[Poppins] text-[44px] max-1000:text-[38px] font-semibold`}>Global News Hub</h1>
                             </div>
                             <MarqueeDemo data={data}/>
                         </BlurFade>
