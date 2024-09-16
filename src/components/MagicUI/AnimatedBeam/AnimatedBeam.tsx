@@ -42,7 +42,7 @@ export function AnimatedBeamMultipleOutputDemo({
   return (
     <div
       className={cn(
-        "relative flex h-[500px] w-full items-center justify-center overflow-hidden rounded-lg bg-background p-10",
+        "relative flex h-[500px] max-1000:h-[300px] w-full items-center justify-center overflow-hidden rounded-lg bg-background p-10 max-1000:p-[0]",
         className,
       )}
       ref={containerRef}
@@ -62,7 +62,7 @@ export function AnimatedBeamMultipleOutputDemo({
           </Circle>
         </div>
         <div className="flex flex-col justify-center">
-          <Circle ref={div7Ref}>
+          <Circle ref={div7Ref} className="max-1000:size-14">
             <Icons.user />
           </Circle>
         </div>
