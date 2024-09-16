@@ -21,22 +21,22 @@ export const Navbar : React.FC = () => {
                             <Globe className={`${theme === "dark" ? "#EDEDED" : "#2E3239"}`}/>
                         </NavLink>
                     </li>
-                    <li className="max-1000:hidden cursor-pointer h-[21px]">
+                    <li className="max-1000:hidden min-1000:block cursor-pointer h-[21px]">
                         <NavLink to={"/weather-predictions"}>
                             Weather Predictions
                         </NavLink>
                     </li>
-                    <li className="max-1000:hidden cursor-pointer h-[21px]">
+                    <li className="max-1000:hidden min-1000:block cursor-pointer h-[21px]">
                         <NavLink to={"/news-&-updates"}>
                             News & Updates
                         </NavLink>
                     </li>
-                    <li className="max-1000:hidden cursor-pointer h-[21px]">
+                    <li className="max-1000:hidden min-1000:block cursor-pointer h-[21px]">
                         <NavLink to={"/guides-&-tips"}>
                             Guides & Tips
                         </NavLink>
                     </li>
-                    <li className="max-1000:hidden cursor-pointer h-[21px]">
+                    <li className="max-1000:hidden min-1000:block cursor-pointer h-[21px]">
                         <NavLink to={"/about-us"}>
                             About
                         </NavLink>

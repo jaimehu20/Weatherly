@@ -16,4 +16,4 @@ export const getForecastData = createAsyncThunk("forecastData/getForecastData", 
     const request = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_ACCESS_KEY}&q=${cityName}&days=7`);
     const data = request.json();
     return data;
-})
+})  

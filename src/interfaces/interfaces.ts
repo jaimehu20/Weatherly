@@ -73,27 +73,27 @@ export interface WeatherState {
 }
 
 export interface NewsResponse {
-    status: string,
-    totalResults: number,
+    totalArticles: number,
     articles: Articles[];
 }
 
 interface Articles {
     source: {
-        id: string | null,
+        url: string
         name: string
     },
-    author: string,
     title: string,
     description: string,
-    url: string,
-    urlToImage: string,
-    publishedAt: string,
     content: string
+    url: string,
+    image: string,
+    publishedAt: string,
+    
 }
 
 export interface NewsState {
-    data: NewsResponse[],
+    weatherData: NewsResponse[],
+    globalData: NewsResponse[],
     status: string,
     error: string | null
 }
