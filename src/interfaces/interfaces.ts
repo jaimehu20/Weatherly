@@ -67,9 +67,35 @@ export interface LocationHour {
 export interface WeatherState {
     data: WeatherResponse[],
     customSearch: WeatherResponse[],
-    forecastData: [],
+    forecastData: ForecastResponse[],
     status: "idle" | "pending" | "fulfilled" | "rejected",
     error: string | undefined | null
+}
+
+export interface NewsResponse {
+    status: string,
+    totalResults: number,
+    articles: Articles[];
+}
+
+interface Articles {
+    source: {
+        id: string | null,
+        name: string
+    },
+    author: string,
+    title: string,
+    description: string,
+    url: string,
+    urlToImage: string,
+    publishedAt: string,
+    content: string
+}
+
+export interface NewsState {
+    data: NewsResponse[],
+    status: string,
+    error: string | null
 }
 
 export interface DateProp {

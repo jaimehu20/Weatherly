@@ -32,7 +32,8 @@ export const WeatherPredictionDetails = () => {
         }
     }, [])
 
-    const currentWeather = data.map((info : WeatherResponse) => {
+    const currentWeather = data.map((info : any) => {
+        console.log(data)
         const lastUpdated = info.current.last_updated.split(' ')[1];
         const getDayOfWeek = (dateString : string) => {
             const date = new Date(dateString);
@@ -83,14 +84,14 @@ export const WeatherPredictionDetails = () => {
                         <div className="max-1000:overflow-x-auto max-1000:w-full md-lg:overflow-hidden">
                             <table className="w-[80%] max-1000:w-full mx-auto" >
                                 <tr className={`${theme === "dark" ? "bg-[#2E3239]" : ""} text-center rounded max-1000:flex max-1000:gap-[15px] md-lg:table-row`}>
-                                    {info.forecast.forecastday.map((dayData) => {
+                                    {info.forecast.forecastday.map((dayData : any) => {
                                         return (
                                             <td className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[#EDEDED]"} font-semibold shadow-lg`}>{getDayOfWeek(dayData.date)}</td>
                                         )
                                     })}
                                 </tr>
                                 <tr className="max-1000:flex max-1000:gap-[15px] md-lg:table-row">
-                                    {info.forecast.forecastday.map((dayData, index) => {
+                                    {info.forecast.forecastday.map((dayData : any, index: number) => {
                                         return (
                                             <>
                                                 <td key={index} className="cursor-pointer shadow-lg" onClick={() => handleClick(index)}>
@@ -104,7 +105,7 @@ export const WeatherPredictionDetails = () => {
                                     })}
                                 </tr>
                                 <tr className="max-1000:flex max-1000:gap-[15px] md-lg:table-row">
-                                    {info.forecast.forecastday.map((dayData, index) => {
+                                    {info.forecast.forecastday.map((dayData : any, index: number) => {
                                             return (
                                                 <>
                                                     <td className="max-1000:w-[80px]">
@@ -127,7 +128,7 @@ export const WeatherPredictionDetails = () => {
                     <article className="flex flex-col p-[20px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Hourly Weather Forecast</h1>
                         <div className="flex overflow-x-scroll whitespace-nowrap scroll-smooth w-full p-[20px]">
-                            {info.forecast.forecastday[0].hour.map((info) => {
+                            {info.forecast.forecastday[0].hour.map((info : any) => {
                                 return (
                                     <div key={info.time} className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[#EDEDED]"} flex-none w-52 h-52 mr-4 flex flex-col items-center justify-center gap-[25px] text-xl rounded-lg shadow-md`}>
                                         <p className="font-semibold">{info.time.split(" ")[1]}</p>
