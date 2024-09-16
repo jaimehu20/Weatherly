@@ -18,19 +18,22 @@ export const Guides = () => {
       <div className="relative flex w-full flex-col items-center justify-start overflow-hidden rounded-lg bg-background md:shadow-xl">
         <MainHeader title="Guides & Tips" />
         <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] self-center mt-[100px] z-10 font-[Poppins] mb-[30px]`}>
-          <section className="flex flex-col w-[80%]">
-            <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem]" text="Staying Safe in Severe Weather: A Guide" />
-            <p className="mt-[50px] text-[40px]">
+          <section className="flex flex-col w-[80%] max-1000:w-[90%]">
+            <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] max-1000:hidden" text="Staying Safe in Severe Weather: A Guide" />
+            <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="Staying Safe in" />
+            <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="Severe Weather:" />
+            <GradualSpacing className="font-display text-center text-2xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="A Guide" />
+            <p className="mt-[50px] text-[40px] max-1000:text-[24px]">
               Weather is a highly unpredictable and powerful force, capable of bringing both favorable conditions and dangerous events like storms, floods, and lightning. 
             </p>
             <p className="mt-[30px] text-[20px]">
-            Knowing how to prepare for and respond to severe weather is vital for ensuring the safety of yourself, your loved ones, and your property. 
-            This essay provides a guide on handling hazardous weather, including storms, floods, lightning, and rare extreme conditions like grape rays (an unusual phenomenon linked to intense solar radiation).
+              Knowing how to prepare for and respond to severe weather is vital for ensuring the safety of yourself, your loved ones, and your property. 
+              This essay provides a guide on handling hazardous weather, including storms, floods, lightning, and rare extreme conditions like grape rays (an unusual phenomenon linked to intense solar radiation).
             </p>
           </section>
-          <section className="mt-[100px] mb-[100px]">
-            <div className="flex justify-around mb-[100px]">
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[40%] h-fit p-[10px] rounded shadow-lg`}>
+          <section className="mt-[100px] mb-[100px] max-1000:mb-[65px]">
+            <div className="flex justify-around mb-[100px] max-1000:mb-[40px] max-1000:flex-col">
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[40%] max-1000:w-full h-fit p-[10px] rounded shadow-lg max-1000:mb-[20px]`}>
                 <h1 className="inline text-[40px] font-semibold">Storms: </h1>
                 <p className="inline text-[20px]">Understanding and preparation</p>
                 <p className="mt-[30px] mb-[20px] text-[18px]">
@@ -69,7 +72,7 @@ export const Guides = () => {
                   </ul>
                 </div>
               </article>
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[40%] h-fit p-[10px] rounded shadow-lg`}>
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[40%] max-1000:w-full h-fit p-[10px] rounded shadow-lg`}>
               <h1 className="inline text-[40px] font-semibold">Floods: </h1>
               <p className="inline text-[20px]">Recognizing and Responding to Water-Related Dangers</p>
               <p className="mt-[30px] mb-[20px] text-[18px]">
@@ -77,18 +80,18 @@ export const Guides = () => {
                 Even a few inches of water can cause life-threatening situations.
               </p>
               <div>
-                <p className="font-semibold">It's important to be prepared for a flood, and you'll know you are when: </p>
+                <p className="font-semibold max-1000:mb-[10px]">It's important to be prepared for a flood, and you'll know you are when: </p>
                 <ul className="list-inside pl-[5px]">
-                  <li className="flex gap-[14px] mb-[10px] list-disc">
-                    <p className="w-[64%]">You monitor local flood alerts, especially during prolonged rain or if you live near bodies of water.</p>
+                  <li className="flex gap-[14px] max-1000:gap-[0] mb-[10px] list-disc">
+                    <p className="w-[64%] max-1000:w-full" >You monitor local flood alerts, especially during prolonged rain or if you live near bodies of water.</p>
                     <Check />
                   </li>
-                  <li className="flex gap-[14px] mb-[10px] list-disc">
-                    <p className="w-[64%]">You have an evacuation plan, knowing the safest routes to higher ground or designated shelters, and keep an emergency kit ready with important documents and valuables in waterproof containers.</p>
+                  <li className="flex gap-[14px] max-1000:gap-[0] mb-[10px] list-disc">
+                    <p className="w-[64%] max-1000:w-full" >You have an evacuation plan, knowing the safest routes to higher ground or designated shelters, and keep an emergency kit ready with important documents and valuables in waterproof containers.</p>
                     <Check />
                   </li>
-                  <li className="flex gap-[14px] mb-[10px] list-disc">
-                    <p className="w-[64%]">You use sandbags or barriers if you live in a flood-prone area to divert water away from entrances and low windows.</p>
+                  <li className="flex gap-[14px] max-1000:gap-[0] mb-[10px] list-disc">
+                    <p className="w-[64%] max-1000:w-full" >You use sandbags or barriers if you live in a flood-prone area to divert water away from entrances and low windows.</p>
                     <Check />
                   </li>
                 </ul>
@@ -96,30 +99,30 @@ export const Guides = () => {
               </article>
             </div>
             <div className="mb-[100px]">
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-full h-fit p-[10px] rounded shadow-lg`}>
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-full h-fit p-[10px] rounded shadow-lg max-1000:flex max-1000:flex-col max-1000:items-center`}>
                 <h1 className="inline text-[40px] font-semibold">Lightning: </h1>
                 <p className="inline text-[20px]">Minimizing Risk from Electrical Storms</p>
-                <p className="mt-[30px] mb-[20px] text-[18px] w-[60%]">
+                <p className="mt-[30px] mb-[20px] text-[18px] w-[60%] max-1000:w-full">
                   Lightning is a common occurrence during thunderstorms and can strike up to 10 miles away from a storm. 
                   Lightning strikes are incredibly dangerous, often causing fires, injuries, or even fatalities.
                 </p>
                 <h2 className="font-semibold">Here are some essential tips to keep in mind:</h2>
-                <div className="flex justify-between w-[80%] mx-auto pb-[20px]">
-                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] items-center mt-[26px] p-[5px] rounded shadow-lg`}>
-                    <p className="w-[22%] text-center mb-[10px] border-b-2 border-black">Stay Indoors</p>
+                <div className="flex max-1000:flex-col justify-between w-[80%] max-1000:w-full mx-auto pb-[20px]">
+                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
+                    <p className="w-[22%] max-1000:max-w-[107px] text-center mb-[10px] border-b-2 border-black">Stay Indoors</p>
                     <p className="w-[70%]">
                       The safest place during a lightning storm is inside a sturdy building. 
                       Stay inside for at least 30 minutes after the last clap of thunder to ensure the storm has passed.
                     </p>
                   </div>
-                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] items-center mt-[26px] p-[5px] rounded shadow-lg`}>
-                    <p className="w-[32%] text-center mb-[10px] border-b-2 border-black">Avoid Conductors</p>
+                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
+                    <p className="w-[32%] max-1000:max-w-[150px] text-center mb-[10px] border-b-2 border-black">Avoid Conductors</p>
                     <p className="w-[70%]">
                       Do not use electrical appliances, telephones, or plumbing during a storm, as lightning can travel through these systems. 
                     </p>
                   </div>
-                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] items-center mt-[26px] p-[5px] rounded shadow-lg`}>
-                    <p className="w-[40%] text-center mb-[10px] border-b-2 border-black">Stay Low if Outdoors</p>
+                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
+                    <p className="w-[40%] max-1000:max-w-[166px] text-center mb-[10px] border-b-2 border-black">Stay Low if Outdoors</p>
                     <p className="w-[70%]">
                       The safest place during a lightning storm is inside a sturdy building. 
                       Stay inside for at least 30 minutes after the last clap of thunder to ensure the storm has passed.
@@ -128,8 +131,8 @@ export const Guides = () => {
                 </div>
               </article>
             </div>
-            <div className="flex justify-around mb-[50px]">
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[60%] h-fit p-[10px] rounded shadow-lg`}>
+            <div className="flex justify-around mb-[50px] max-1000:flex-col">
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[60%] max-1000:w-full h-fit p-[10px] rounded shadow-lg max-1000:mb-[20px]`}>
               <h1 className="inline text-[40px] font-semibold">Extreme Heat and Grape Rays: </h1>
               <p className="inline text-[20px]">Protecting Against Sun-Related Hazards</p>
               <p className="mt-[30px] mb-[20px] text-[18px]">
@@ -173,7 +176,7 @@ export const Guides = () => {
                 </ul>
               </div>
               </article>
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[30%] h-fit p-[10px] rounded shadow-lg`}>
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[30%] max-1000:w-full h-fit p-[10px] rounded shadow-lg`}>
                 <h1 className="inline text-[40px] font-semibold">Tornadoes and High Winds: </h1>
                 <p className="inline text-[20px]">Responding to Violent Windstorms</p>
                 <p className="mt-[30px] mb-[20px] text-[18px]">Tornadoes and high-wind events, like straight-line winds, are incredibly dangerous due to the flying debris and structural damage they can cause.</p>
@@ -203,14 +206,14 @@ export const Guides = () => {
             </div>
           </section>
           <section>
-            <p className="mt-[50px] text-[40px]">Weather hazards, from storms and floods to heat and radiation, are forces that must be respected. </p>
-            <p className="mt-[30px] text-[20px]">
+            <p className="mt-[50px] text-[40px] max-1000:text-center max-1000:text-[30px]">Weather hazards, from storms and floods to heat and radiation, are forces that must be respected. </p>
+            <p className="mt-[30px] text-[20px] max-1000:text-center">
               Being informed and prepared is crucial to minimizing risk and ensuring safety during these events. 
               By staying alert, creating emergency plans, and having the right safety equipment, you can significantly reduce the impact of these natural phenomena. 
               Awareness and preparation are the key tools that can protect you and your family from the unpredictable dangers of extreme weather conditions.
             </p>
-            <div className="flex justify-end mt-[50px] rounded">
-              <small className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} w-[30%] p-5 rounded shadow-lg`}>
+            <div className="flex justify-end max-1000:justify-center mt-[50px] rounded">
+              <small className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} w-[30%] max-1000:w-full p-5 rounded shadow-lg`}>
                   This guide is based on recommendations from official security and civil protection sources. However, it is essential that you always consult the weather warnings and alerts issued
                   by the national authorities in your country, as they are the best source to be aware of the specific and current risks in your area. Stay informed and follow local instructions
                   to ensure your safety at all times.
@@ -219,7 +222,7 @@ export const Guides = () => {
           </section>
         </main>
         <Footer />
-        <DotPattern className={cn( "[mask-image:radial-gradient(1600px_circle_at_center,white,transparent)]",)} />
+        <DotPattern className={cn( "[mask-image:radial-gradient(6000px_circle_at_center,white,transparent)]",)} />
       </div>
     </>
   );

@@ -16,7 +16,7 @@ export const Navbar : React.FC = () => {
         <nav className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[rgba(255,255,255,0.8)]"} ${isOpened ? "h-[100vh]" : ""} font-[Poppins]`}>
             <div className={`${theme === "dark" ? "text-white" : ""} h-[48px] text-[14px] min-1000:mx-auto min-1000:flex min-1000:justify-center`}>
                 <ul className="flex gap-11 items-center max-1000:justify-between">
-                    <li className="cursor-pointer h-[21px]">
+                    <li className="cursor-pointer h-[21px] max-1000:ml-[6px]">
                         <NavLink to={"/"}>
                             <Globe className={`${theme === "dark" ? "#EDEDED" : "#2E3239"}`}/>
                         </NavLink>
