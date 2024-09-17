@@ -44,6 +44,7 @@ export default {
         'max-1000': { 'max': '999px' },
         'min-1000' : '1000px',
         'md-lg': {'min': '700px', 'max': '1000px'},
+        'wide' : {'min' : '1365px'}
       },
       display: {
         'table-row' : 'table-row'
