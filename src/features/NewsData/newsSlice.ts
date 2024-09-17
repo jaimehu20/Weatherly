@@ -27,7 +27,7 @@ export const newsSlice = createSlice({
 
         builder.addCase(getNews.fulfilled, (state, action) => {
             state.status = "fulfilled";
-            state.globalData.push(action.payload)
+            state.globalData = [...state.globalData, ...action.payload.articles];
         });
     }
 })
