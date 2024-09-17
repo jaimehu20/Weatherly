@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Globe } from "../Icons/Globe";
-import { DarkModeIcon } from "../Icons/DarkMode";
+import { Globe } from "@/components/Icons/Globe";
+import { DarkModeIcon } from "@/components/Icons/DarkMode";
 import { NavLink } from "react-router-dom";
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 import { Spin as Hamburger } from 'hamburger-react'
-import { Linkedin } from "../Icons/Linkedin";
-import { Github } from "../Icons/Github";
+import { Linkedin } from "@/components/Icons/Linkedin";
+import { Github } from "@/components/Icons/Github";
 
 export const Navbar : React.FC = () => {
 

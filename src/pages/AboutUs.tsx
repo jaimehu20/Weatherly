@@ -1,15 +1,15 @@
 "use client";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 import React from "react";
-import { Navbar } from "../components/Navbar/Navbar";
-import DotPattern from "../components/MagicUI/Background/Darkmode/DarkmodeComponent";
-import { MainHeader } from "../components/Header/MainHeader";
-import { SparklesTextDemo } from "../components/MagicUI/Sparkles/Sparkles";
-import { TechnologiesDesktop } from "../components/MagicUI/OrbitingCircles/TechnologiesDesktop";
-import { AnimatedBeamMultipleOutputDemo } from "../components/MagicUI/AnimatedBeam/AnimatedBeam";
-import { Footer } from "../components/Footer/Footer";
-import { useTheme } from "../context/ThemeContext";
-import { TechnologiesMobile } from "../components/MagicUI/OrbitingCircles/TechnologiesMobile";
+import { Navbar } from "@/components/Navbar/Navbar";
+import DotPattern from "@/components/MagicUI/Background/Darkmode/DarkmodeComponent";
+import { MainHeader } from "@/components/Header/MainHeader";
+import { SparklesTextDemo } from "@/components/MagicUI/Sparkles/Sparkles";
+import { TechnologiesDesktop } from "@/components/MagicUI/OrbitingCircles/TechnologiesDesktop";
+import { AnimatedBeamMultipleOutputDemo } from "@/components/MagicUI/AnimatedBeam/AnimatedBeam";
+import { Footer } from "@/components/Footer/Footer";
+import { useTheme } from "@/context/ThemeContext";
+import { TechnologiesMobile } from "@/components/MagicUI/OrbitingCircles/TechnologiesMobile";
 
 export const About = () => {
 

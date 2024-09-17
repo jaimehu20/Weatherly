@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import { LocationHour } from "../../interfaces/interfaces";
+import { LocationHour } from "@/interfaces/interfaces";
 
 export const Clock = (props : LocationHour) => {
 

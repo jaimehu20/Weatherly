@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Sun } from "../Icons/Sun";
-import { Humidity } from "../Icons/Humidity";
-import { Fog } from "../Icons/Fog";
-import { Wind } from "../Icons/Wind";
-import { UVI } from "../Icons/UVI";
-import { CurrentWeather, LocationWeather } from "../../interfaces/interfaces";
-import { Clock } from "../Clock/Clock";
-import { useTheme } from "../../context/ThemeContext";
+import { Humidity } from "@/components/Icons/Humidity";
+import { Fog } from "@/components/Icons/Fog";
+import { Wind } from "@/components/Icons/Wind";
+import { UVI } from "@/components/Icons/UVI";
+import { CurrentWeather, LocationWeather } from "@/interfaces/interfaces";
+import { Clock } from "@/components/Clock/Clock";
+import { useTheme } from "@/context/ThemeContext";
 
 type WeatherCardProps = {
     location : LocationWeather;

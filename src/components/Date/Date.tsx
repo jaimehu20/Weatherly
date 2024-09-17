@@ -1,5 +1,5 @@
 import React from "react";
-import { DateProp } from "../../interfaces/interfaces";
+import { DateProp } from "@/interfaces/interfaces";
 
 export const Prueba = (props : DateProp) => {
     

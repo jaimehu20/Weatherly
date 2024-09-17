@@ -1,12 +1,12 @@
 "use client";
-import { cn } from "../lib/utils";
-import { Navbar } from "../components/Navbar/Navbar";
-import DotPattern from "../components/MagicUI/Background/Darkmode/DarkmodeComponent";
-import { MainHeader } from "../components/Header/MainHeader";
-import GradualSpacing from "../components/MagicUI/GradualSpacing/GradualSpacingComponent";
-import { useTheme } from "../context/ThemeContext";
-import { Check } from "../components/Icons/Check";
-import { Footer } from "../components/Footer/Footer";
+import { cn } from "@/lib/utils";
+import { Navbar } from "@/components/Navbar/Navbar";
+import DotPattern from "@/components/MagicUI/Background/Darkmode/DarkmodeComponent";
+import { MainHeader } from "@/components/Header/MainHeader";
+import GradualSpacing from "@/components/MagicUI/GradualSpacing/GradualSpacingComponent";
+import { useTheme } from "@/context/ThemeContext";
+import { Check } from "@/components/Icons/Check";
+import { Footer } from "@/components/Footer/Footer";
 
 export const Guides = () => {
 

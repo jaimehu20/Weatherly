@@ -1,18 +1,9 @@
-import React from "react";
-
-interface GlobeProps {
-    className: string
-}
-
-export const Globe : React.FC<GlobeProps> = (props : GlobeProps) => {
-    
-    return <>
-        <svg  
+<svg  
             xmlns="http://www.w3.org/2000/svg"  
             width="24"  
             height="24"  
             viewBox="0 0 24 24"  
-            fill={props.className}  
+            fill="currentColor"  
             className="icon icon-tabler icons-tabler-filled icon-tabler-globe">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M11 4a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
@@ -20,5 +11,3 @@ export const Globe : React.FC<GlobeProps> = (props : GlobeProps) => {
             <path d="M11 16a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -1.993 .117l-.007 -.117v-4a1 1 0 0 1 1 -1z" />
             <path d="M15 20a1 1 0 0 1 .117 1.993l-.117 .007h-8a1 1 0 0 1 -.117 -1.993l.117 -.007h8z" />
         </svg>
-    </>
-}

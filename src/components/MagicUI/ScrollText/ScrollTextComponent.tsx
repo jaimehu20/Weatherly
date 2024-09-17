@@ -3,8 +3,8 @@
 import { FC, ReactNode, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { cn } from "../../../lib/utils";
-import { useTheme } from "../../../context/ThemeContext";
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/context/ThemeContext";
 
 interface TextRevealByWordProps {
   text: string;

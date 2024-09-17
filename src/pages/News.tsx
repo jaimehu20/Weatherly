@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import { Navbar } from "../components/Navbar/Navbar";
-import { MainHeader } from "../components/Header/MainHeader";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { fetchedNews, fetchStatus } from "../features/NewsData/newsSlice";
-import { getWeatherNews } from "../features/NewsData/newsThunk";
-import { GlobalHub } from "../components/News/News";
-import { Footer } from "../components/Footer/Footer";
-import { RightArrow } from "../components/Icons/RightArrow";
-import BlurFade from "../components/MagicUI/Blur/BlurFadeComponent";
-import { useTheme } from "../context/ThemeContext";
+import { Navbar } from "@/components/Navbar/Navbar";
+import { MainHeader } from "@/components/Header/MainHeader";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { fetchedNews, fetchStatus } from "@/features/NewsData/newsSlice";
+import { getWeatherNews } from "@/features/NewsData/newsThunk";
+import { GlobalHub } from "@/components/News/News";
+import { Footer } from "@/components/Footer/Footer";
+import { RightArrow } from "@/components/Icons/RightArrow";
+import BlurFade from "@/components/MagicUI/Blur/BlurFadeComponent";
+import { useTheme } from "@/context/ThemeContext";
 
 export const News = () => {
 

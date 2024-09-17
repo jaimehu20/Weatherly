@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { useTheme } from "../../context/ThemeContext";
-import { fetchedGlobal, fetchStatus } from "../../features/NewsData/newsSlice";
-import { cn } from "../../lib/utils";
-import { RightArrow } from "../Icons/RightArrow";
-import Marquee from "../MagicUI/Marquee/MarqueeComponent";
-import { getNews } from "../../features/NewsData/newsThunk";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { useTheme } from "@/context/ThemeContext";
+import { fetchedGlobal } from "@/features/NewsData/newsSlice";
+import { cn } from "@/lib/utils";
+import { RightArrow } from "@/components/Icons/RightArrow";
+import Marquee from "@/components/MagicUI/Marquee/MarqueeComponent";
+import { getNews } from "@/features/NewsData/newsThunk";
 
-export function GlobalHub(props : any) {
+export function GlobalHub() {
 
   const dispatch = useAppDispatch();
   const data = useAppSelector(fetchedGlobal);
-  const status = useAppSelector(fetchStatus);
   const{ theme } = useTheme();
   
   const getRandomTopics = (topicsArray : any) => {

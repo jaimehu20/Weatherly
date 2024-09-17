@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { fetchedForecast, fetchStatus } from "../features/WeatherData/weatherSlice";
-import { getForecastData } from "../features/WeatherData/weatherThunks";
-import { Navbar } from "../components/Navbar/Navbar";
-import { MainHeader } from "../components/Header/MainHeader";
-import { Prueba } from "../components/Date/Date";
-import { Clock } from "../components/Clock/Clock";
-import { Footer } from "../components/Footer/Footer";
-import BlurFade from "../components/MagicUI/Blur/BlurFadeComponent";
-import { WeatherResponse } from "../interfaces/interfaces";
-import { useTheme } from "../context/ThemeContext";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { fetchedForecast, fetchStatus } from "@/features/WeatherData/weatherSlice";
+import { getForecastData } from "@/features/WeatherData/weatherThunks";
+import { Navbar } from "@/components/Navbar/Navbar";
+import { MainHeader } from "@/components/Header/MainHeader";
+import { Prueba } from "@/components/Date/Date";
+import { Clock } from "@/components/Clock/Clock";
+import { Footer } from "@/components/Footer/Footer";
+import BlurFade from "@/components/MagicUI/Blur/BlurFadeComponent";
+import { useTheme } from "@/context/ThemeContext";
 
 export const WeatherPredictionDetails = () => {
 

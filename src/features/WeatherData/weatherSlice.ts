@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../../app/store";
+import type { RootState } from "@/app/store";
 import { getCustomLocation, getForecastData, getLocationData } from "./weatherThunks";
-import { WeatherState } from "../../interfaces/interfaces";
+import { WeatherState } from "@/interfaces/interfaces";
 
 const initialState : WeatherState = {
     data: [],

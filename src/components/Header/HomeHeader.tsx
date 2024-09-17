@@ -1,6 +1,6 @@
 import React from "react";
-import { useTheme } from "../../context/ThemeContext";
-import { Particles } from "../MagicUI/Particles/ParticlesComponent";
+import { useTheme } from "@/context/ThemeContext";
+import { Particles } from "@/components/MagicUI/Particles/ParticlesComponent";
 
 export const Header : React.FC = () => {
 

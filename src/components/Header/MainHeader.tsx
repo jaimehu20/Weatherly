@@ -1,4 +1,4 @@
-import { HeaderStyledTitle } from "../MagicUI/BorderBeam/BorderBeam"
+import { HeaderStyledTitle } from "@/components/MagicUI/BorderBeam/BorderBeam"
 
 type MainHeaderprops = {
     title: string }

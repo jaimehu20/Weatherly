@@ -1,8 +1,8 @@
 import React from "react";
-import { Heart } from "../Icons/Heart";
-import { Linkedin } from "../Icons/Linkedin";
-import { Github } from "../Icons/Github";
-import { useTheme } from "../../context/ThemeContext";
+import { Heart } from "@/components/Icons/Heart";
+import { Linkedin } from "@/components/Icons/Linkedin";
+import { Github } from "@/components/Icons/Github";
+import { useTheme } from "@/context/ThemeContext";
 
 export const Footer : React.FC = () => {
 

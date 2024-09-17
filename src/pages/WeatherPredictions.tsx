@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../components/Navbar/Navbar";
-import { MainHeader } from "../components/Header/MainHeader";
-import { Footer } from "../components/Footer/Footer";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { clearCustomResponse, fetchedData, fetchedSearch, fetchStatus } from "../features/WeatherData/weatherSlice";
-import { getCustomLocation, getLocationData } from "../features/WeatherData/weatherThunks";
-import { WeatherResponse } from "../interfaces/interfaces";
+import { Navbar } from "@/components/Navbar/Navbar";
+import { MainHeader } from "@/components/Header/MainHeader";
+import { Footer } from "@/components/Footer/Footer";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { clearCustomResponse, fetchedData, fetchedSearch, fetchStatus } from "@/features/WeatherData/weatherSlice";
+import { getCustomLocation, getLocationData } from "@/features/WeatherData/weatherThunks";
+import { WeatherResponse } from "@/interfaces/interfaces";
 import { Link } from "react-router-dom";
-import { Card } from "../components/WeatherCard/Card";
-import BlurFade from "../components/MagicUI/Blur/BlurFadeComponent";
-import { SadIcon } from "../components/Icons/Sad";
-import { Search } from "../components/Icons/Search";
-import { useTheme } from "../context/ThemeContext";
+import { Card } from "@/components/WeatherCard/Card";
+import BlurFade from "@/components/MagicUI/Blur/BlurFadeComponent";
+import { SadIcon } from "@/components/Icons/Sad";
+import { Search } from "@/components/Icons/Search";
+import { useTheme } from "@/context/ThemeContext";
 
 export const WeatherPredictions : React.FC = () => {
 

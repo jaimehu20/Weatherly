@@ -1,10 +1,9 @@
 import React from "react"
-import { Navbar } from "../components/Navbar/Navbar"
-import { Header } from "../components/Header/HomeHeader"
-import { Slogan } from "../components/MagicUI/ScrollText/TextReveal"
-import { RightArrow } from "../components/Icons/RightArrow"
-import { Footer } from "../components/Footer/Footer"
-import { useTheme } from "../context/ThemeContext"
+import { Navbar } from "@/components/Navbar/Navbar"
+import { Header } from "@/components/Header/HomeHeader"
+import { Slogan } from "@/components/MagicUI/ScrollText/TextReveal"
+import { Footer } from "@/components/Footer/Footer"
+import { useTheme } from "@/context/ThemeContext"
 import { useNavigate } from "react-router-dom"
 
 export const Home : React.FC = () => {

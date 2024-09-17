@@ -3,8 +3,8 @@
 import { CSSProperties, ReactElement, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import { cn } from "../../../lib/utils";
-import { useTheme } from "../../../context/ThemeContext";
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/context/ThemeContext";
 
 interface Sparkle {
   id: string;
