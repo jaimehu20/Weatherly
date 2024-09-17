@@ -92,9 +92,9 @@ export const WeatherPredictions : React.FC = () => {
             <section className={`${theme === "dark" ? "bg-[url(/skynight.webp)]" : "bg-[url(/sky.webp)]"} relative h-[150vh] max-1000:h-[${resizer}] w-full bg-cover bg-center flex flex-col`}>
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                 <div className="flex max-1000:flex-col justify-between w-[75%] max-1000:w-[84%] max-1000:max-w-[315px] mx-auto mb-[42px] z-10 mb-[40px] max-1000:gap-[20px]">
-                    <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} text-[34px] font-[Poppins] font-semibold`}>Top Locations</h1>
+                    <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} text-[34px] min-1000:text-[30px] font-[Poppins] font-semibold`}>Top Locations</h1>
                     <form id="searchForm" onSubmit={handleSubmit}>
-                        <input type="text" className={`${theme === "dark" ? "bg-[#51636C] text-[#EDEDED] border-[#EDEDED]" : "bg-[rgb(223,233,245,0.6)] text-[#002E48] border-[#002E48]"} text-[26px] font-[Poppins] pl-[20px] pr-[70px] pt-[10px] pb-[10px] max-1000:p-[2px] max-1000:w-[90%] rounded border-2`} onChange={handleChange} placeholder="Search your city..."/>
+                        <input type="text" className={`${theme === "dark" ? "bg-[#51636C] text-[#EDEDED] border-[#EDEDED]" : "bg-[rgb(223,233,245,0.6)] text-[#002E48] border-[#002E48]"} text-[26px] min-1000:text-[18px] font-[Poppins] pl-[20px] pr-[70px] pt-[10px] pb-[10px] max-1000:p-[2px] max-1000:w-[90%] rounded border-2`} onChange={handleChange} placeholder="Search your city..."/>
                         <button type="submit" className="relative right-[40px] top-[7px]">
                             <Search />
                         </button>
@@ -107,7 +107,7 @@ export const WeatherPredictions : React.FC = () => {
                     ( 
                         <div className="w-full z-10">
                             <BlurFade  delay={0.25 + 1 * 0.05} inView>
-                                <div className="flex flex-col w-[80%] mx-auto absolute z-10 max-1000:max-w-[446px]">
+                                <div className="flex flex-col w-[80%] min-1000:w-[95%] mx-auto absolute z-10 max-1000:max-w-[446px]">
                                     <div className="grid grid-cols-3 grid-rows-3 gap-4 max-1000:flex max-1000:flex-col">
                                         {cityCards}
                                     </div>
@@ -119,6 +119,5 @@ export const WeatherPredictions : React.FC = () => {
                 <div className={`${theme === "dark" ? "absolute inset-0 bg-gradient-to-b from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-0 bg-gradient-to-b from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
             </section>
         </main>
-        <Footer />
     </>
 }

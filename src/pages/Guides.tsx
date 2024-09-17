@@ -17,13 +17,13 @@ export const Guides = () => {
       <Navbar />
       <div className="relative flex w-full flex-col items-center justify-start overflow-hidden rounded-lg bg-background md:shadow-xl">
         <MainHeader title="Guides & Tips" />
-        <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] self-center mt-[100px] z-10 font-[Poppins] mb-[30px]`}>
-          <section className="flex flex-col w-[80%] max-1000:w-[90%]">
-            <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] max-1000:hidden" text="Staying Safe in Severe Weather: A Guide" />
+        <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] min-1000:w-full wide:w-[80%] self-center mt-[100px] z-10 font-[Poppins] mb-[30px]`}>
+          <section className="flex flex-col w-[80%] max-1000:w-[90%] min-1000:mx-auto">
+            <GradualSpacing className="font-display text-center text-4xl min-1000:text-[40px] wide:text-[62px] font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] max-1000:hidden" text="Staying Safe in Severe Weather: A Guide" />
             <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="Staying Safe in" />
             <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="Severe Weather:" />
             <GradualSpacing className="font-display text-center text-2xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="A Guide" />
-            <p className="mt-[50px] text-[40px] max-1000:text-[24px]">
+            <p className="mt-[50px] text-[40px] wide:text-[40px] min-1000:text-[30px] max-1000:text-[24px]">
               Weather is a highly unpredictable and powerful force, capable of bringing both favorable conditions and dangerous events like storms, floods, and lightning. 
             </p>
             <p className="mt-[30px] text-[20px]">
@@ -33,7 +33,7 @@ export const Guides = () => {
           </section>
           <section className="mt-[100px] mb-[100px] max-1000:mb-[65px]">
             <div className="flex justify-around mb-[100px] max-1000:mb-[40px] max-1000:flex-col">
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[40%] max-1000:w-full h-fit p-[10px] rounded shadow-lg max-1000:mb-[20px]`}>
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-[40%] max-1000:w-full min-1000:w-[48%] h-fit p-[10px] rounded shadow-lg max-1000:mb-[20px]`}>
                 <h1 className="inline text-[40px] font-semibold">Storms: </h1>
                 <p className="inline text-[20px]">Understanding and preparation</p>
                 <p className="mt-[30px] mb-[20px] text-[18px]">
@@ -99,7 +99,7 @@ export const Guides = () => {
               </article>
             </div>
             <div className="mb-[100px]">
-              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-full h-fit p-[10px] rounded shadow-lg max-1000:flex max-1000:flex-col max-1000:items-center`}>
+              <article className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} p-[24px] w-full min-1000:w-[90%] min-1000:mx-auto h-fit p-[10px] rounded shadow-lg max-1000:flex max-1000:flex-col max-1000:items-center`}>
                 <h1 className="inline text-[40px] font-semibold">Lightning: </h1>
                 <p className="inline text-[20px]">Minimizing Risk from Electrical Storms</p>
                 <p className="mt-[30px] mb-[20px] text-[18px] w-[60%] max-1000:w-full">
@@ -108,21 +108,21 @@ export const Guides = () => {
                 </p>
                 <h2 className="font-semibold">Here are some essential tips to keep in mind:</h2>
                 <div className="flex max-1000:flex-col justify-between w-[80%] max-1000:w-full mx-auto pb-[20px]">
-                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
-                    <p className="w-[22%] max-1000:max-w-[107px] text-center mb-[10px] border-b-2 border-black">Stay Indoors</p>
+                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] min-1000:w-[32%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
+                    <p className="w-[22%] max-1000:max-w-[107px] min-1000:w-[48%] text-center mb-[10px] border-b-2 border-black">Stay Indoors</p>
                     <p className="w-[70%]">
                       The safest place during a lightning storm is inside a sturdy building. 
                       Stay inside for at least 30 minutes after the last clap of thunder to ensure the storm has passed.
                     </p>
                   </div>
-                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
-                    <p className="w-[32%] max-1000:max-w-[150px] text-center mb-[10px] border-b-2 border-black">Avoid Conductors</p>
+                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] min-1000:w-[32%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
+                    <p className="w-[32%] max-1000:max-w-[150px] min-1000:w-[70%] text-center mb-[10px] border-b-2 border-black">Avoid Conductors</p>
                     <p className="w-[70%]">
                       Do not use electrical appliances, telephones, or plumbing during a storm, as lightning can travel through these systems. 
                     </p>
                   </div>
-                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
-                    <p className="w-[40%] max-1000:max-w-[166px] text-center mb-[10px] border-b-2 border-black">Stay Low if Outdoors</p>
+                  <div className={`${theme === "dark" ? "bg-[#26292B]" : "bg-[#EDEDED]"} flex flex-col justify-center w-[30%] min-1000:w-[32%] max-1000:w-full items-center mt-[26px] p-[5px] rounded shadow-lg`}>
+                    <p className="w-[40%] max-1000:max-w-[166px] min-1000:w-[60%] text-center mb-[10px] border-b-2 border-black">Stay Low if Outdoors</p>
                     <p className="w-[70%]">
                       The safest place during a lightning storm is inside a sturdy building. 
                       Stay inside for at least 30 minutes after the last clap of thunder to ensure the storm has passed.
@@ -205,14 +205,14 @@ export const Guides = () => {
               </article>
             </div>
           </section>
-          <section>
-            <p className="mt-[50px] text-[40px] max-1000:text-center max-1000:text-[30px]">Weather hazards, from storms and floods to heat and radiation, are forces that must be respected. </p>
+          <section className="min-1000:w-[80%] min-1000:mx-auto">
+            <p className="mt-[50px] text-[40px] max-1000:text-center max-1000:text-[30px] min-1000:text-[30px]">Weather hazards, from storms and floods to heat and radiation, are forces that must be respected. </p>
             <p className="mt-[30px] text-[20px] max-1000:text-center">
               Being informed and prepared is crucial to minimizing risk and ensuring safety during these events. 
               By staying alert, creating emergency plans, and having the right safety equipment, you can significantly reduce the impact of these natural phenomena. 
               Awareness and preparation are the key tools that can protect you and your family from the unpredictable dangers of extreme weather conditions.
             </p>
-            <div className="flex justify-end max-1000:justify-center mt-[50px] rounded">
+            <div className="flex justify-end max-1000:justify-center min-1000:justify-center mt-[50px] rounded">
               <small className={`${theme === "dark" ? "bg-[#2E3239]" : "bg-[rgb(203,203,203)]"} w-[30%] max-1000:w-full p-5 rounded shadow-lg`}>
                   This guide is based on recommendations from official security and civil protection sources. However, it is essential that you always consult the weather warnings and alerts issued
                   by the national authorities in your country, as they are the best source to be aware of the specific and current risks in your area. Stay informed and follow local instructions

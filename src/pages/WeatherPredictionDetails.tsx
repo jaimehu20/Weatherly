@@ -32,7 +32,6 @@ export const WeatherPredictionDetails = () => {
     }, [])
 
     const currentWeather = data.map((info : any) => {
-        console.log(data)
         const lastUpdated = info.current.last_updated.split(' ')[1];
         const getDayOfWeek = (dateString : string) => {
             const date = new Date(dateString);
@@ -42,7 +41,7 @@ export const WeatherPredictionDetails = () => {
 
         return (
            <>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[38%] max-1000:w-[95%] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10  mb-[50px]`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[38%] max-1000:w-[95%] min-1000:w-[80%] min-1000:max-w-[824px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10  mb-[50px]`}>
                         <article className="flex justify-around p-[22px] pl-[30px] max-1000:pl-[6px] max-1000:pr-[6px]">
                             <div className="flex max-1000:mr-[7px]">
                                 <div className="max-1000:w-[138px]">
@@ -77,7 +76,7 @@ export const WeatherPredictionDetails = () => {
                             </div>
                         </article>
                 </div>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] max-1000:w-[95%] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
                     <article className="flex flex-col p-[20px] max-1000:pl-[10px] max-1000:pr-[10px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Upcoming 7 days</h1>
                         <div className="max-1000:overflow-x-auto max-1000:w-full md-lg:overflow-hidden">
@@ -123,7 +122,7 @@ export const WeatherPredictionDetails = () => {
                         </div>
                     </article>
                 </div>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] max-1000:w-[95%] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2 z-10`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2 z-10`}>
                     <article className="flex flex-col p-[20px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Hourly Weather Forecast</h1>
                         <div className="flex overflow-x-scroll whitespace-nowrap scroll-smooth w-full p-[20px]">
@@ -136,8 +135,7 @@ export const WeatherPredictionDetails = () => {
                                     </div>
                                 )
                             })}
-</div>
-
+                        </div>
                     </article>
                 </div>
            </>

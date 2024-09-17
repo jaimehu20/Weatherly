@@ -19,10 +19,10 @@ export const About = () => {
         <Navbar />
       <div className="relative flex w-full flex-col items-center justify-start overflow-hidden rounded-lg bg-background md:shadow-xl">
         <MainHeader title="About us" />
-        <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] mt-[150px] font-[Poppins]`}>
+        <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] min-1000:w-[90%] mt-[150px] font-[Poppins]`}>
             <section className="mb-[150px] max-1000:mb-[80px]">
                 <SparklesTextDemo title="Weatherly"/>
-                <p className="mt-[50px] text-[40px] max-1000:text-[24px]">
+                <p className="mt-[50px] text-[40px] max-1000:text-[24px] min-1000:text-[25px]">
                     Weatherly is a free, non-profit web application that allows users to check current and future weather conditions for any city in the world. 
                 </p>
                 <p className="mt-[30px] text-[20px]">
@@ -31,13 +31,13 @@ export const About = () => {
                     The app uses free resources to obtain its weather data and is not commercially driven, offering an accessible service for users of all backgrounds.
                 </p>
             </section>
-            <section >
+            <section className="min-1000:mb-[100px]">
                 <SparklesTextDemo title="Technologies and tools"/>
-                <p className="mt-[50px] text-[40px] max-1000:text-[24px]">
+                <p className="mt-[50px] text-[40px] max-1000:text-[24px] min-1000:text-[25px]">
                     The Weatherly application is built using a modern tech stack to ensure a smooth, responsive, and scalable user experience. 
                 </p>
                 <div className="flex max-1000:flex-col">
-                    <p className="mt-[30px] text-[20px] w-[70%] max-1000:w-full leading-loose">
+                    <p className="mt-[30px] text-[20px] w-[70%] max-1000:w-full min-1000:w-full leading-loose">
                         The frontend is developed with React for building dynamic user interfaces, while Redux is used for efficient state management, ensuring that data such as weather information and user preferences
                         are easily accessible across components. React-Router enables seamless navigation between different pages, allowing users to switch between weather forecasts and news effortlessly.
                         The UI is styled with Tailwind CSS, providing a flexible and responsive design system, while TypeScript ensures type safety and better code maintainability. 
@@ -49,7 +49,7 @@ export const About = () => {
             </section>
             <section>
                 <SparklesTextDemo title="APIs used"/>
-                <p className="mt-[50px] text-[40px] max-1000:text-[24px]">
+                <p className="mt-[50px] text-[40px] max-1000:text-[24px] min-1000:text-[25px]">
                     Weatherly integrates two key APIs to provide accurate and up-to-date information on both weather conditions and related news.   
                 </p>
                 <div className="flex max-1000:flex-col">

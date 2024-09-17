@@ -31,7 +31,7 @@ export const News = () => {
         const content = articles.map((articleGroup, index: number) => {
             return (
                 <>
-                    <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] max-1000:w-[95%] max-1000:max-w-[590px] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>
+                    <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] max-1000:w-[95%] max-1000:max-w-[590px] min-1000:max-w-[1340px] min-1000:w-[90%] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>
                         <div className="border-b-2 border-black w-[98%] mx-auto mb-[30px]">
                             {index === 0 && (
                                 <div className="p-[12px]">
@@ -59,7 +59,7 @@ export const News = () => {
                                                 <p className="text-[25px] font-medium max-1000:text-[20px] max-1000:font-light">{articleGroup[1].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[1].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] max-1000:w-[120px] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank" rel="noopener no referrer">
+                                            <a className="flex justify-end bg-white w-[18%] min-1000:w-[30%] max-1000:w-[120px] min-1000:max-w-[128px] p-[3px] rounded-[12px] self-start" href={articleGroup[1].url} target="_blank" rel="noopener no referrer">
                                                 <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                                 </a>
@@ -72,7 +72,7 @@ export const News = () => {
                                                 <p className="text-[25px] font-medium max-1000:text-[20px] max-1000:font-light">{articleGroup[2].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[2].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] max-1000:w-[120px] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank" rel="noopener no referrer">
+                                            <a className="flex justify-end bg-white w-[18%] min-1000:w-[30%] max-1000:w-[120px] min-1000:max-w-[128px] p-[3px] rounded-[12px] self-start" href={articleGroup[2].url} target="_blank" rel="noopener no referrer">
                                                 <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                             </a>
@@ -85,7 +85,7 @@ export const News = () => {
                                                 <p className="text-[25px] font-medium max-1000:text-[20px] max-1000:font-light">{articleGroup[3].title}</p>
                                             </a>
                                             <small className="mb-[16px]">{`Published at ${new Date(articleGroup[3].publishedAt).toISOString().substr(11, 8)}`}</small>
-                                            <a className="flex justify-end bg-white w-[18%] max-1000:w-[120px] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank" rel="noopener no referrer">
+                                            <a className="flex justify-end bg-white w-[18%] min-1000:w-[30%] max-1000:w-[120px] min-1000:max-w-[128px] p-[3px] rounded-[12px] self-start" href={articleGroup[3].url} target="_blank" rel="noopener no referrer">
                                                 <p className="text-[#002E48]">Learn More</p>
                                                 <RightArrow />
                                             </a>
@@ -110,7 +110,7 @@ export const News = () => {
                     <div className="mt-[78px]">
                         <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} font-[Poppins] text-[44px] max-1000:text-[38px] font-semibold`}>Global News Hub</h1>
                     </div>
-                    <GlobalHub data={data}/>
+                    <GlobalHub />
                 </BlurFade>
                 <div className={`${theme === "dark" ? "absolute inset-0 bg-gradient-to-b from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-0 bg-gradient-to-b from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
             </section>
