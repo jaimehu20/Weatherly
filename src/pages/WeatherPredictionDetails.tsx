@@ -149,7 +149,7 @@ export const WeatherPredictionDetails = () => {
         <Navbar />
         <MainHeader title="Weather Details"/>
         <main className="mt-20 mb-20">
-            <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"}  relative w-full bg-cover bg-center flex flex-col font-[Poppins]`}>
+            <section className={`${theme === "dark" ? "bg-[url(/skynight.webp)]" : "bg-[url(/sky.webp)]"}  relative w-full bg-cover bg-center flex flex-col font-[Poppins]`}>
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                     <BlurFade delay={0.25 + 1 * 0.05} inView className="flex-col">
                         <div className="w-[20%] max-1000:w-full text-center mx-auto mb-[40px] z-10">

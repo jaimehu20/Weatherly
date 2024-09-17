@@ -103,7 +103,7 @@ export const News = () => {
         <Navbar />
         <MainHeader title="News & Updates" />
         <main className="mt-20 mb-10">
-            <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"} relative w-full bg-cover bg-center flex flex-col`}>
+            <section className={`${theme === "dark" ? "bg-[url(/skynight.webp)]" : "bg-[url(/sky.webp)]"} relative w-full bg-cover bg-center flex flex-col`}>
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                 <BlurFade delay={0.25 + 1 * 0.05} inView className="flex flex-row justify-center">
                     {content}

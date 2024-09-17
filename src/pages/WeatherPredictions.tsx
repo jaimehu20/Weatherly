@@ -89,7 +89,7 @@ export const WeatherPredictions : React.FC = () => {
         <Navbar />
         <MainHeader title="Weather Predictions"/>
         <main className="mt-20 mb-20">
-            <section className={`${theme === "dark" ? "bg-[url(./skynight.webp)]" : "bg-[url(./sky.webp)]"} relative h-[150vh] max-1000:h-[${resizer}] w-full bg-cover bg-center flex flex-col`}>
+            <section className={`${theme === "dark" ? "bg-[url(/skynight.webp)]" : "bg-[url(/sky.webp)]"} relative h-[150vh] max-1000:h-[${resizer}] w-full bg-cover bg-center flex flex-col`}>
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                 <div className="flex max-1000:flex-col justify-between w-[75%] max-1000:w-[84%] max-1000:max-w-[315px] mx-auto mb-[42px] z-10 mb-[40px] max-1000:gap-[20px]">
                     <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} text-[34px] font-[Poppins] font-semibold`}>Top Locations</h1>
