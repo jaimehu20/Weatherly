@@ -78,7 +78,7 @@ export const WeatherPredictionDetails = () => {
                 </div>
                 <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
                     <article className="flex flex-col p-[20px] max-1000:pl-[10px] max-1000:pr-[10px]">
-                        <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Upcoming 7 days</h1>
+                        <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Upcoming days</h1>
                         <div className="max-1000:overflow-x-auto max-1000:w-full md-lg:overflow-hidden">
                             <table className="w-[80%] max-1000:w-full mx-auto" >
                                 <tr className={`${theme === "dark" ? "bg-[#2E3239]" : ""} text-center rounded max-1000:flex max-1000:gap-[15px] md-lg:table-row`}>

@@ -61,7 +61,7 @@ export const About = () => {
                             wind speed, and forecasts, ensuring that users receive accurate and timely information for any city worldwide.
                         </p>
                         <p className="mt-[30px] text-[20px] w-[70%] max-1000:w-full leading-loose">
-                            <b>NewsAPI:</b> For the news section, Weatherly employs NewsAPI, an API that provides access to a wide range of current news. This API allows the integration of news related 
+                            <b>GNews API:</b> For the news section, Weatherly employs GNews API, an API that provides access to a wide range of current news. This API allows the integration of news related 
                             to weather phenomena, climate events and much more, offering users relevant and updated information on how weather impacts different regions and any significant developments 
                             in the meteorological sphere.
                         </p>
