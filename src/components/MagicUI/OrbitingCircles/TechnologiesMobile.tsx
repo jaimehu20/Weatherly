@@ -79,7 +79,6 @@ export function TechnologiesMobile() {
         Stack
       </span>
 
-      {/* Inner Circles */}
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"
         duration={20}

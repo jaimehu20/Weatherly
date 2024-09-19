@@ -1,5 +1,8 @@
 import React from "react";
-import { DateProp } from "@/interfaces/interfaces";
+
+export interface DateProp {
+    localtime: string
+}
 
 export const Prueba = (props : DateProp) => {
     

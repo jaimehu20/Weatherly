@@ -1,7 +1,7 @@
 import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
 
-export interface OrbitingCirclesProps {
+interface OrbitingCirclesProps {
   className?: string;
   children?: React.ReactNode;
   reverse?: boolean;

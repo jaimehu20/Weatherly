@@ -9,12 +9,13 @@ import { Footer } from "@/components/Footer/Footer";
 import { RightArrow } from "@/components/Icons/RightArrow";
 import BlurFade from "@/components/MagicUI/Blur/BlurFadeComponent";
 import { useTheme } from "@/context/ThemeContext";
+import { Articles, NewsResponse } from "@/interfaces/interfaces";
 
 export const News = () => {
 
     const dispatch = useAppDispatch();
-    const data = useAppSelector(fetchedNews);
-    const status = useAppSelector(fetchStatus);
+    const data : NewsResponse[] = useAppSelector(fetchedNews);
+    const status : string = useAppSelector(fetchStatus);
     const { theme } = useTheme();
 
     useEffect(() => {
@@ -28,7 +29,7 @@ export const News = () => {
         const article2 = data[0].articles.slice(4);
         const articles = [article1, article2];
 
-        const content = articles.map((articleGroup, index: number) => {
+        const content = articles.map((articleGroup : Articles[], index: number) => {
             return (
                 <>
                     <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] max-1000:w-[95%] max-1000:max-w-[590px] min-1000:max-w-[1340px] min-1000:w-[90%] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>

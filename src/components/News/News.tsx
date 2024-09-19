@@ -6,14 +6,15 @@ import { cn } from "@/lib/utils";
 import { RightArrow } from "@/components/Icons/RightArrow";
 import Marquee from "@/components/MagicUI/Marquee/MarqueeComponent";
 import { getNews } from "@/features/NewsData/newsThunk";
+import { Article, NewsResponse } from "@/interfaces/interfaces";
 
 export function GlobalHub() {
 
   const dispatch = useAppDispatch();
-  const data = useAppSelector(fetchedGlobal);
+  const data : NewsResponse[] = useAppSelector(fetchedGlobal);
   const{ theme } = useTheme();
   
-  const getRandomTopics = (topicsArray : any) => {
+  const getRandomTopics = (topicsArray : string[]) => {
     const shuffled = topicsArray.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 2);
   };
@@ -29,6 +30,7 @@ export function GlobalHub() {
   }, [dispatch]);
 
   const news = data.map((article : any) => {
+
     return (
         <>
             <figure className={cn(`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)] text-[#EDEDED]" : "bg-[rgb(223,233,245,0.6)] text-[#002E48]"} flex flex-col justify-around relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 dark:border-gray-50/[.1] dark:hover:bg-gray-50/[.15] shadow-md`)}>
@@ -43,8 +45,6 @@ export function GlobalHub() {
     )
 })
 
-
-    
   return (
     <div className="relative flex h-[736px] p-[12px] mx-auto w-[90%] flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl z-10 font-[Poppins] text-black mt-[30px]">
       <Marquee pauseOnHover className="[--duration:700s]">

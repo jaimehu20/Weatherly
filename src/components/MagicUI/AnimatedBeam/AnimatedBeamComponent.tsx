@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
-export interface AnimatedBeamProps {
+interface AnimatedBeamProps {
   className?: string;
   containerRef: RefObject<HTMLElement>; // Container ref
   fromRef: RefObject<HTMLElement>;

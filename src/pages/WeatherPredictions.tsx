@@ -16,9 +16,9 @@ import { useTheme } from "@/context/ThemeContext";
 export const WeatherPredictions : React.FC = () => {
 
     const dispatch = useAppDispatch();
-    const response : any = useAppSelector(fetchedData);
-    const customResponse : any = useAppSelector(fetchedSearch);
-    const fetchState = useAppSelector(fetchStatus);
+    const response : WeatherResponse[] = useAppSelector(fetchedData);
+    const customResponse : WeatherResponse[] = useAppSelector(fetchedSearch);
+    const fetchState : string = useAppSelector(fetchStatus);
     const cities = ["London", "Istanbul", "Sydney", "Tokyo", "Chicago", "Paris", "Madrid", "Liverpool", "Moscow"];
     const [ searchPattern, setSearchPattern ] = useState<string>("");
     const { theme } = useTheme();
@@ -59,8 +59,6 @@ export const WeatherPredictions : React.FC = () => {
         dispatch(getCustomLocation(searchPattern));
         handleResizer();
     }
-
-    
 
     const customCityCard = customResponse.map((info : WeatherResponse) => {
         if (info.error) {

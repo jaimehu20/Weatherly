@@ -76,7 +76,6 @@ export function TechnologiesDesktop() {
         Stack
       </span>
 
-      {/* Inner Circles */}
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"
         duration={20}
@@ -108,9 +107,6 @@ export function TechnologiesDesktop() {
       >
         <Icons.magicUI />
       </OrbitingCircles>
-      
-
-      {/* Outer Circles (reverse) */}
       <OrbitingCircles
         className="size-[50px] border-none bg-transparent"
         radius={190}

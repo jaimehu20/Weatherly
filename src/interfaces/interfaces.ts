@@ -52,7 +52,10 @@ export interface WeatherResponse {
 export interface ForecastResponse {
     current: CurrentWeather,
     forecast: ForecastDay,
-    location: Location
+    location: {
+        name: string,
+        localtime: string
+    }
 }
 
 interface Condition {
@@ -74,10 +77,10 @@ export interface WeatherState {
 
 export interface NewsResponse {
     totalArticles: number,
-    articles: Articles[];
+    articles: Article[];
 }
 
-interface Articles {
+export interface Article {
     source: {
         url: string
         name: string
@@ -88,7 +91,6 @@ interface Articles {
     url: string,
     image: string,
     publishedAt: string,
-    
 }
 
 export interface NewsState {
@@ -96,8 +98,4 @@ export interface NewsState {
     globalData: NewsResponse[],
     status: string,
     error: string | null
-}
-
-export interface DateProp {
-    localtime: string
 }
