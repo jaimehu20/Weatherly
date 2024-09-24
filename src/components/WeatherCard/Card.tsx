@@ -17,7 +17,7 @@ export const Card  = (props : WeatherCardProps) => {
     
     return ( <>
             {props.current && props.location ? (
-                <div className={`${theme === "dark" ? "bg-[rgb(81,99,108,0.6)] text-[#EDEDED]" : "bg-[rgb(223,233,245,0.6)] text-[#002E48]"} rounded-[12px] border border-[#091c47]-500 w-[80%] max-1000:w-full min-1000:w-[95%] min-1000:max-w-[450px] font-[Poppins] mb-[70px] cursor-pointer`}>
+                <div className={`${theme === "dark" ? "bg-[rgb(81,99,108,0.6)] text-lightGray" : "bg-[rgb(223,233,245,0.6)] text-[#002E48]"} rounded-[12px] border border-[#091c47]-500 w-[80%] max-1000:w-full min-1000:w-[95%] min-1000:max-w-[450px] font-[Poppins] mb-[70px] cursor-pointer`}>
                 <div className="flex items-end mb-[26px] pt-[20px] pb-[20px] border-b border-gray-500 w-[90%] mx-auto">
                     <h3 className="w-[80%] mx-auto text-[40px] max-1000:text-[26px] min-1000:text-[30px]">{props.location.name}</h3>
                     <Clock localtime={props.location.localtime}/>

@@ -108,7 +108,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 
   return (
     <div
-      className={cn(`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} text-6xl max-1000:text-[44px] font-bold font-[Poppins]`, className)}
+      className={cn(`${theme === "dark" ? "text-lightGray" : "text-[#26292B]"} text-6xl max-1000:text-[44px] font-bold font-[Poppins]`, className)}
       {...props}
       style={
         {

@@ -17,7 +17,7 @@ export const Guides = () => {
       <Navbar />
       <div className="relative flex w-full flex-col items-center justify-start overflow-hidden rounded-lg bg-background md:shadow-xl">
         <MainHeader title="Guides & Tips" />
-        <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] min-1000:w-full wide:w-[80%] self-center mt-[100px] z-10 font-[Poppins] mb-[30px]`}>
+        <main className={`${theme === "dark" ? "text-lightGray" : "text-[#26292B]"} w-[80%] min-1000:w-full wide:w-[80%] self-center mt-[100px] z-10 font-[Poppins] mb-[30px]`}>
           <section className="flex flex-col w-[80%] max-1000:w-[90%] min-1000:mx-auto">
             <GradualSpacing className="font-display text-center text-4xl min-1000:text-[40px] wide:text-[62px] font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] max-1000:hidden" text="Staying Safe in Severe Weather: A Guide" />
             <GradualSpacing className="font-display text-center text-4xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem] min-1000:hidden" text="Staying Safe in" />

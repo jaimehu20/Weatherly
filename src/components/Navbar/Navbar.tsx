@@ -51,7 +51,7 @@ export const Navbar : React.FC = () => {
             </div>
             <div
                 className={`transition-max-height duration-300 ease-in-out overflow-hidden ${isOpened ? "max-h-[100vh]" : "max-h-0"} min-1000:hidden`}>
-                <ul className={`${theme === "dark" ? "text-[#EDEDED]" : ""} flex flex-col items-baseline gap-[28px] p-4 mt-[24px] font-semibold text-[24px]`}>
+                <ul className={`${theme === "dark" ? "text-lightGray" : ""} flex flex-col items-baseline gap-[28px] p-4 mt-[24px] font-semibold text-[24px]`}>
                     <li className="cursor-pointer">
                         <NavLink to={"/weather-predictions"}>
                             Weather Predictions

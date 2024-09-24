@@ -19,7 +19,7 @@ export const About = () => {
         <Navbar />
       <div className="relative flex w-full flex-col items-center justify-start overflow-hidden rounded-lg bg-background md:shadow-xl">
         <MainHeader title="About us" />
-        <main className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} w-[80%] min-1000:w-[90%] mt-[150px] font-[Poppins]`}>
+        <main className={`${theme === "dark" ? "text-lightGray" : "text-[#26292B]"} w-[80%] min-1000:w-[90%] mt-[150px] font-[Poppins]`}>
             <section className="mb-[150px] max-1000:mb-[80px]">
                 <SparklesTextDemo title="Weatherly"/>
                 <p className="mt-[50px] text-[40px] max-1000:text-[24px] min-1000:text-[25px]">

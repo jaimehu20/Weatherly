@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { RightArrow } from "@/components/Icons/RightArrow";
 import BlurFade from "@/components/MagicUI/Blur/BlurFadeComponent";
 import { useTheme } from "@/context/ThemeContext";
-import { Articles, NewsResponse } from "@/interfaces/interfaces";
+import { Article, NewsResponse } from "@/interfaces/interfaces";
 
 export const News = () => {
 
@@ -29,19 +29,19 @@ export const News = () => {
         const article2 = data[0].articles.slice(4);
         const articles = [article1, article2];
 
-        const content = articles.map((articleGroup : Articles[], index: number) => {
+        const content = articles.map((articleGroup : Article[], index: number) => {
             return (
                 <>
                     <article className={`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)]" : "bg-[rgb(223,233,245,0.6)]"} z-10 w-[60%] max-1000:w-[95%] max-1000:max-w-[590px] min-1000:max-w-[1340px] min-1000:w-[90%] mx-auto font-[Poppins] rounded-[12px] pb-[20px]`}>
                         <div className="border-b-2 border-black w-[98%] mx-auto mb-[30px]">
                             {index === 0 && (
                                 <div className="p-[12px]">
-                                    <h3 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} text-[30px] font-semibold w-[98%] mx-auto`}>Featured news</h3>
+                                    <h3 className={`${theme === "dark" ? "text-lightGray" : "text-[#002E48]"} text-[30px] font-semibold w-[98%] mx-auto`}>Featured news</h3>
                                 </div> 
                             )}
                         </div>
                         <div>
-                            <div className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} p-[12px] pl-[24px] pr-[24px]`}>
+                            <div className={`${theme === "dark" ? "text-lightGray" : "text-[#002E48]"} p-[12px] pl-[24px] pr-[24px]`}>
                                 <div className="grid grid-cols-2 grid-rows-3 gap-x-[20px] gap-y-[20px] max-1000:flex max-1000:flex-col">
                                     <div className="row-span-3 mr-[30px]">
                                         <div className="flex flex-col">
@@ -109,7 +109,7 @@ export const News = () => {
                 <BlurFade delay={0.25 + 1 * 0.05} inView className="flex flex-row justify-center">
                     {content}
                     <div className="mt-[78px]">
-                        <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} font-[Poppins] text-[44px] max-1000:text-[38px] font-semibold`}>Global News Hub</h1>
+                        <h1 className={`${theme === "dark" ? "text-lightGray" : "text-[#002E48]"} font-[Poppins] text-[44px] max-1000:text-[38px] font-semibold`}>Global News Hub</h1>
                     </div>
                     <GlobalHub />
                 </BlurFade>

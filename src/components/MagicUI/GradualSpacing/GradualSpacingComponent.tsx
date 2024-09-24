@@ -16,7 +16,7 @@ export default function GradualSpacing({ text, duration = 0.5, delayMultiple = 0
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#26292B]"} flex justify-start space-x-1`}>
+    <div className={`${theme === "dark" ? "text-lightGray" : "text-[#26292B]"} flex justify-start space-x-1`}>
       <AnimatePresence>
         {text.split("").map((char, i) => (
           <motion.h1

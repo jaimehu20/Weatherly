@@ -48,6 +48,9 @@ export default {
       },
       display: {
         'table-row' : 'table-row'
+      },
+      colors: {
+        lightGray: '#EDEDED'
       }
     },
   },

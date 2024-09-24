@@ -33,7 +33,7 @@ export function GlobalHub() {
 
     return (
         <>
-            <figure className={cn(`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)] text-[#EDEDED]" : "bg-[rgb(223,233,245,0.6)] text-[#002E48]"} flex flex-col justify-around relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 dark:border-gray-50/[.1] dark:hover:bg-gray-50/[.15] shadow-md`)}>
+            <figure className={cn(`${theme === "dark" ? "bg-[rgb(46,50,57,0.8)] text-lightGray" : "bg-[rgb(223,233,245,0.6)] text-[#002E48]"} flex flex-col justify-around relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 dark:border-gray-50/[.1] dark:hover:bg-gray-50/[.15] shadow-md`)}>
                 <img src={article.image} className="mt-[20px] rounded h-[116px] object-cover"/>
                 <p className="mt-[20px] font-semibold">{article.title}</p>
                 <a className="flex justify-end bg-white w-[58%] p-[3px] rounded-[12px] self-end" href={article.url} target="_blank" rel="noopener noreferrer">

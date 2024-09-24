@@ -42,7 +42,7 @@ export const WeatherPredictionDetails = () => {
 
         return (
            <>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[38%] max-1000:w-[95%] min-1000:w-[80%] min-1000:max-w-[824px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10  mb-[50px]`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-lightGray" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[38%] max-1000:w-[95%] min-1000:w-[80%] min-1000:max-w-[824px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10  mb-[50px]`}>
                         <article className="flex justify-around p-[22px] pl-[30px] max-1000:pl-[6px] max-1000:pr-[6px]">
                             <div className="flex max-1000:mr-[7px]">
                                 <div className="max-1000:w-[138px]">
@@ -77,7 +77,7 @@ export const WeatherPredictionDetails = () => {
                             </div>
                         </article>
                 </div>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-lightGray" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2  z-10 mb-[50px]`}>
                     <article className="flex flex-col p-[20px] max-1000:pl-[10px] max-1000:pr-[10px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Upcoming days</h1>
                         <div className="max-1000:overflow-x-auto max-1000:w-full md-lg:overflow-hidden">
@@ -123,7 +123,7 @@ export const WeatherPredictionDetails = () => {
                         </div>
                     </article>
                 </div>
-                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-[#EDEDED]" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2 z-10`}>
+                <div className={`${theme === "dark" ? "bg-[#26292B] border-[#EDEDED] text-lightGray" : "bg-[#F0F8FF] border-[#002E48] text-[#002E48]"} flex flex-col w-[50%] min-1000:w-[80%] max-1000:w-[95%] min-1000:max-w-[1139px] max-1000:max-w-[655px] mx-auto rounded-[8px] border-2 z-10`}>
                     <article className="flex flex-col p-[20px]">
                         <h1 className="font-bold text-[30px] pl-[20px] mb-[30px]">Hourly Weather Forecast</h1>
                         <div className="flex overflow-x-scroll whitespace-nowrap scroll-smooth w-full p-[20px]">
@@ -151,7 +151,7 @@ export const WeatherPredictionDetails = () => {
                 <div className={`${theme === "dark" ? "absolute inset-1 bg-gradient-to-r from-[#26292B] via-transparent to-[#26292B]" : "absolute inset-1 bg-gradient-to-r from-[#EDEDED] via-transparent to-[#EDEDED]"}`}></div>
                     <BlurFade delay={0.25 + 1 * 0.05} inView className="flex-col">
                         <div className="w-[20%] max-1000:w-full text-center mx-auto mb-[40px] z-10">
-                            <h1 className={`${theme === "dark" ? "text-[#EDEDED]" : "text-[#002E48]"} text-[40px] font-semibold`}>{city}</h1>
+                            <h1 className={`${theme === "dark" ? "text-lightGray" : "text-[#002E48]"} text-[40px] font-semibold`}>{city}</h1>
                         </div>
                         {currentWeather}
                     </BlurFade>
