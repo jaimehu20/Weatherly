@@ -11,7 +11,7 @@ Las tecnologías utilizadas son:
 
 ⚡ FUNCIONALIDADES ⚡
 
-- Pronóstico: En la página principal se puede ver el tiempo actual de unas ciudades concretas y a través del buscador, se puede buscar cualquier lugar específico. al hacer click en cada ciudad, obtendrás una vista más detallada de la información meteorológica en la zona, datos actualizados en tiempo real, pronóstico de los próximos días y también un prnóstico por horas.
+- Pronóstico: En la página principal se puede ver el tiempo actual de unas ciudades concretas y a través del buscador, se puede buscar cualquier lugar específico. al hacer click en cada ciudad, obtendrás una vista más detallada de la información meteorológica en la zona, datos actualizados en tiempo real, pronóstico de los próximos días y también un pronóstico por horas.
 - Noticias: En esta sección, encontraremos en el primer bloque noticias actuales sobre el tiempo meteorológico y en el segundo bloque, encontraremos noticias generales sobre diversos temas alrededor de todo el mundo.
 - Modo claro/oscuro: En la barra de navegación hay un icono que nos permite cambiar la interfaz a modo claro/oscuro.
 
